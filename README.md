@@ -1,205 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>HYFY Labs — Coming Soon</title>
+<title>HYFY Labs | How You Find Yours</title>
 
-  <meta
-    name="description"
-    content="HYFY Labs — How You Find Yours."
-  />
+<meta name="description" content="HYFY Labs helps people discover products, communities, experiences, and opportunities that resonate.">
 
-  <style>
-    :root {
-      --bg: #070a14;
-      --text: #f7f8ff;
-      --muted: #a8b0c7;
-      --cyan: #49f4ff;
-      --violet: #b75cff;
-      --line: rgba(255,255,255,.12);
-    }
+<style>
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+:root{
+  --bg:#050816;
+  --cyan:#53F3FF;
+  --purple:#C15EFF;
+  --text:#FFFFFF;
+  --muted:#AAB2C8;
+}
 
-    body {
-      min-height: 100vh;
-      font-family:
-        Inter,
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-      color: var(--text);
+body{
+  min-height:100vh;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(83,243,255,.15), transparent 30%),
+    radial-gradient(circle at 80% 30%, rgba(193,94,255,.18), transparent 35%),
+    #050816;
 
-      background:
-        radial-gradient(circle at 20% 25%, rgba(73,244,255,.18), transparent 28%),
-        radial-gradient(circle at 80% 35%, rgba(183,92,255,.24), transparent 30%),
-        linear-gradient(180deg, #080b16 0%, #03050b 100%);
+  color:var(--text);
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
 
-      background-image:
-        linear-gradient(var(--line) 1px, transparent 1px),
-        linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background:
+    linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
 
-      background-size: 80px 80px;
-      opacity: .15;
+  background-size:80px 80px;
+  opacity:.4;
+}
 
-      mask-image:
-        radial-gradient(circle at center, black 0%, transparent 75%);
-    }
+.container{
+  position:relative;
+  z-index:2;
+  max-width:900px;
+  text-align:center;
+  padding:40px;
+}
 
-    main {
-      position: relative;
-      z-index: 1;
+.logo{
+  max-width:380px;
+  width:80%;
+  margin:0 auto 40px;
+  display:block;
 
-      width: min(920px, calc(100% - 32px));
+  filter:
+    drop-shadow(0 0 30px rgba(83,243,255,.25))
+    drop-shadow(0 0 50px rgba(193,94,255,.25));
+}
 
-      text-align: center;
-      padding: 56px 24px;
-    }
+h1{
+  font-size:clamp(3rem,8vw,6rem);
+  line-height:.95;
+  margin-bottom:20px;
 
-    .logo-wrap {
-      width: min(420px, 86vw);
-      margin: 0 auto 34px;
+  background:
+    linear-gradient(
+      90deg,
+      var(--cyan),
+      #ffffff,
+      var(--purple)
+    );
 
-      border-radius: 28px;
-      overflow: hidden;
+  -webkit-background-clip:text;
+  color:transparent;
+}
 
-      box-shadow:
-        0 0 60px rgba(73,244,255,.25),
-        0 0 90px rgba(183,92,255,.20);
-    }
+.subtitle{
+  font-size:clamp(1.1rem,2vw,1.6rem);
+  color:var(--muted);
+  max-width:700px;
+  margin:0 auto;
+  line-height:1.6;
+}
 
-    .logo-wrap img {
-      width: 100%;
-      display: block;
-    }
+.badge{
+  display:inline-block;
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
+  margin-bottom:24px;
 
-      padding: 10px 16px;
+  padding:10px 18px;
 
-      border: 1px solid rgba(255,255,255,.16);
-      border-radius: 999px;
+  border:1px solid rgba(255,255,255,.12);
 
-      color: var(--muted);
-      background: rgba(255,255,255,.04);
+  border-radius:999px;
 
-      backdrop-filter: blur(12px);
+  color:var(--muted);
 
-      margin-bottom: 22px;
+  backdrop-filter:blur(12px);
+}
 
-      font-size: 14px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
+.footer{
+  margin-top:50px;
+  color:rgba(255,255,255,.45);
+  font-size:.9rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
 
-    .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-
-      background:
-        linear-gradient(135deg, var(--cyan), var(--violet));
-
-      box-shadow: 0 0 18px var(--cyan);
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(44px, 8vw, 96px);
-      line-height: .92;
-      letter-spacing: -0.06em;
-    }
-
-    .gradient {
-      background:
-        linear-gradient(
-          90deg,
-          var(--cyan),
-          #ffffff,
-          var(--violet)
-        );
-
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    p {
-      max-width: 720px;
-
-      margin: 24px auto 0;
-
-      color: var(--muted);
-
-      font-size: clamp(18px, 2.2vw, 24px);
-      line-height: 1.5;
-    }
-
-    .footer {
-      margin-top: 42px;
-
-      font-size: 14px;
-
-      color: rgba(255,255,255,.52);
-
-      letter-spacing: .04em;
-    }
-  </style>
+</style>
 </head>
-
 <body>
-  <main>
 
-    <div class="logo-wrap">
-      <img
-        src="hyfy-logo.jpeg"
-        alt="HYFY Labs"
-      />
-    </div>
+<div class="container">
 
-    <div class="eyebrow">
-      <span class="dot"></span>
-      Coming Soon
-    </div>
+  <img
+    class="logo"
+    src="hyfy-logo.jpeg"
+    alt="HYFY Labs Logo">
 
-    <h1>
-      <span class="gradient">How You</span><br>
-      Find Yours
-    </h1>
+  <div class="badge">
+    Launching Soon
+  </div>
 
-    <p>
-      Products. Communities. Experiences. People.
-      HYFY Labs is building tools that help people discover what resonates with them —
-      and help organizations understand why.
-    </p>
+  <h1>
+    How You Find Yours
+  </h1>
 
-    <div class="footer">
-      HYFY Labs
-    </div>
+  <p class="subtitle">
+    We're building a new way to help people discover
+    products, communities, experiences, and opportunities
+    that resonate — while helping organizations understand why.
+  </p>
 
-  </main>
+  <div class="footer">
+    HYFYLabs.com
+  </div>
+
+</div>
+
 </body>
 </html>
