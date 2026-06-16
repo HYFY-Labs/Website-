@@ -134,8 +134,8 @@ h1{
 
   <img
     class="logo"
-    src="hyfy-logo.jpeg"
-    alt="HYFY Labs Logo">
+    src="IMG_3574.jpeg"
+    alt="IMG_3574.jpeg">
 
   <div class="badge">
     Launching Soon
