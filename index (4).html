@@ -1,0 +1,1894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Kalamazoo Growlers × HYFY Labs · Own the Relationship</title>
+<meta name="description" content="HYFY connects products, people, ownership, events and experiences into living ecosystems designed for participation.">
+<meta property="og:title" content="Kalamazoo Growlers × HYFY Labs">
+<meta property="og:description" content="HYFY connects products, people, ownership, events and experiences into living ecosystems designed for participation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hyfy-scroll-world-production.up.railway.app/for/kalamazoo-growlers">
+<meta property="og:image" content="https://hyfy-scroll-world-production.up.railway.app/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="HYFY Labs · Own the Relationship. Not the Algorithm.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hyfy-scroll-world-production.up.railway.app/og.jpg">
+<meta name="theme-color" content="#08080b">
+<link rel="icon" type="image/png" href="../../img/brand/hyfy-h.png">
+<link rel="apple-touch-icon" href="../../img/brand/hyfy-h.png">
+
+<style>
+  /* ═══════════════════════════════════════════════════════════════
+     HYFY Labs — editorial manifesto.
+
+     The type system carries the argument. Serif is the human voice:
+     relationships, identity, belonging, every line that names a person.
+     Mono is the machine voice: labels, indices, metrics, the words that
+     belong to systems. Sans does the quiet work in between. That split
+     is the page's thesis, set rather than stated.
+     ═══════════════════════════════════════════════════════════════ */
+  /* Oxanium sets the display voice: squared, geometric, built for sport-tech.
+     Archivo carries body copy, Martian Mono every label, eyebrow and figure.
+     All three subset to the glyphs these pages and all 86 prospect rows can
+     reach, so a club name never lands on a missing glyph. */
+  @font-face{font-family:"Oxanium";src:url("../../fonts/oxanium-var.woff2") format("woff2");font-weight:200 800;font-style:normal;font-display:swap;}
+  @font-face{font-family:"Archivo";src:url("../../fonts/archivo-var.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap;}
+  @font-face{font-family:"Martian Mono";src:url("../../fonts/martianmono-var.woff2") format("woff2");font-weight:100 800;font-style:normal;font-display:swap;}
+
+  :root{
+    --ink:#06060a;
+    --ink-2:#0c0c14;
+    --paper:#f4f6fb;
+    --paper-dim:#a9b0c4;
+    --paper-mute:#7c8497;   /* 5.40:1 on the new ground, up from 4.66 */
+    --ember:#f43cd0;
+    --gold:#18d7f2;
+    --cold:#3e67ff;
+    --violet:#7a32f5;
+    --rule:rgba(244,246,251,.13);
+    --rule-soft:rgba(244,246,251,.07);
+
+    --display:"Oxanium","Segoe UI",Tahoma,sans-serif;
+    --body:"Archivo","Helvetica Neue",Helvetica,sans-serif;
+    --mono:"Martian Mono",ui-monospace,"SF Mono",Menlo,monospace;
+
+    --accent:var(--ember);
+    --shell:min(1240px, 100% - clamp(28px,7vw,160px));
+    --nav-h:70px;
+    --ease:cubic-bezier(.16,1,.3,1);
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--ink);color:var(--paper-dim);
+    font-family:var(--body);font-size:16px;line-height:1.6;
+    font-optical-sizing:auto;-webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;overflow-x:hidden;
+  }
+  a{color:inherit;}
+  ::selection{background:var(--ember);color:var(--ink);}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:1px;}
+  .shell{width:var(--shell);margin-inline:auto;}
+
+  /* ── atmosphere ────────────────────────────────────────────────── */
+  #dust{position:fixed;inset:0;width:100%;height:100%;z-index:0;display:block;}
+  #wash{
+    position:fixed;inset:0;z-index:1;pointer-events:none;
+    background:radial-gradient(108% 74% at 50% 60%, rgba(239,90,42,.19) 0%, transparent 64%);
+    transition:background 800ms var(--ease);
+  }
+  #vignette{
+    position:fixed;inset:0;z-index:2;pointer-events:none;
+    background:radial-gradient(126% 92% at 50% 42%, transparent 40%, rgba(0,0,0,.7) 100%);
+  }
+  /* the layout guide, left visible on purpose. a printer's rule, barely there. */
+  #guides{
+    position:fixed;inset:0;z-index:2;pointer-events:none;
+    width:var(--shell);margin-inline:auto;
+    background-image:linear-gradient(90deg, var(--rule-soft) 1px, transparent 1px);
+    background-size:calc(100% / 6) 100%;
+    opacity:.55;
+  }
+  @media (max-width:820px){#guides{display:none;}}
+  #grain{
+    position:fixed;inset:0;z-index:3;pointer-events:none;opacity:.055;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ── chrome ────────────────────────────────────────────────────── */
+  #progress{
+    position:fixed;top:0;left:0;height:1.5px;z-index:40;width:0%;
+    background:var(--accent);box-shadow:0 0 14px var(--accent);
+    transition:background 500ms var(--ease);
+  }
+  header.nav{
+    position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:30;
+    display:flex;align-items:center;
+    backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);
+    background:rgba(10,8,6,0);border-bottom:1px solid transparent;
+    transition:background 400ms var(--ease),border-color 400ms var(--ease);
+  }
+  header.nav.stuck{background:rgba(10,8,6,.78);border-bottom-color:var(--rule);}
+  .nav .shell{display:flex;align-items:center;justify-content:space-between;gap:20px;}
+  .mark{display:flex;align-items:center;gap:12px;text-decoration:none;}
+  .mark svg{width:24px;height:24px;flex:none;}
+  /* The wordmark carries the name, so no text sits beside it. Height is
+     fixed and width follows, because the lockup must never be redrawn or
+     restretched (brand system v1.2 §02). */
+  .mark img.wordmark{height:32px;width:auto;flex:none;display:block;}
+  .mark b{
+    font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:-.005em;
+    color:var(--paper);line-height:1;white-space:nowrap;
+  }
+  .mark i{
+    font-family:var(--mono);font-style:normal;font-size:9px;font-weight:500;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--paper-mute);white-space:nowrap;
+    border-left:1px solid var(--rule);padding-left:12px;line-height:1.1;
+  }
+  @media (max-width:860px){.mark i{display:none;}}
+
+  /* ── buttons ───────────────────────────────────────────────────── */
+  .btn{
+    --btn-fg:var(--ink);--btn-bg:var(--ember);
+    position:relative;display:inline-flex;align-items:center;gap:12px;
+    font-family:var(--mono);font-size:10px;font-weight:500;
+    letter-spacing:.13em;text-transform:uppercase;text-decoration:none;
+    padding:15px 24px;white-space:nowrap;overflow:hidden;
+    color:var(--btn-fg);background:var(--btn-bg);border:1px solid var(--btn-bg);
+    transition:transform 400ms var(--ease),box-shadow 400ms var(--ease);
+  }
+  .btn .arw{display:inline-block;transition:transform 420ms var(--ease);}
+  .btn::after{
+    content:"";position:absolute;inset:0;background:var(--paper);
+    transform:translateY(101%);transition:transform 460ms var(--ease);z-index:0;
+  }
+  .btn > *{position:relative;z-index:1;}
+  .btn:hover,.btn:focus-visible{transform:translateY(-2px);box-shadow:0 14px 40px -14px rgba(239,90,42,.8);}
+  .btn:hover::after,.btn:focus-visible::after{transform:translateY(0);}
+  .btn:hover .arw,.btn:focus-visible .arw{transform:translateX(5px);}
+
+  /* the quiet one: a rule that sweeps, no box */
+  .lnk{
+    position:relative;display:inline-flex;align-items:center;gap:11px;
+    font-family:var(--mono);font-size:10px;font-weight:500;
+    letter-spacing:.13em;text-transform:uppercase;text-decoration:none;
+    color:var(--paper);padding:15px 2px;
+  }
+  .lnk::before{
+    content:"";position:absolute;left:0;right:0;bottom:9px;height:1px;
+    background:var(--paper);transform-origin:right;transform:scaleX(.22);
+    transition:transform 480ms var(--ease),background 300ms ease;
+  }
+  .lnk:hover::before,.lnk:focus-visible::before{transform:scaleX(1);transform-origin:left;background:var(--ember);}
+  .lnk .arw{display:inline-block;transition:transform 420ms var(--ease);}
+  .lnk:hover .arw{transform:translateX(5px);}
+
+  .nav .btn{padding:11px 18px;font-size:10.5px;}
+
+  /* ── beat rail ─────────────────────────────────────────────────── */
+  nav.rail{position:fixed;right:30px;top:50%;transform:translateY(-50%);z-index:25;display:flex;flex-direction:column;}
+  .rail a{
+    display:flex;align-items:center;justify-content:flex-end;gap:11px;
+    text-decoration:none;padding:6px 0;
+    font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:.11em;
+    color:var(--paper-mute);transition:color 380ms var(--ease);
+  }
+  .rail a em{
+    font-style:normal;max-width:0;overflow:hidden;white-space:nowrap;
+    text-transform:uppercase;opacity:0;letter-spacing:.14em;
+    transition:max-width 460ms var(--ease),opacity 300ms ease;
+  }
+  .rail a s{display:block;width:18px;height:1px;background:currentColor;flex:none;transition:width 420ms var(--ease),background 300ms ease;}
+  .rail a:hover em,.rail a:focus-visible em{max-width:190px;opacity:1;}
+  .rail a:hover,.rail a[aria-current="true"]{color:var(--paper);}
+  .rail a[aria-current="true"] s{width:38px;background:var(--accent);}
+  @media (max-width:1360px){nav.rail{display:none;}}
+
+  /* ── editorial type ────────────────────────────────────────────── */
+  h1,h2,h3{font-family:var(--display);font-weight:700;color:var(--paper);margin:0;}
+  h1{font-size:clamp(38px,7.5vw,102px);line-height:.94;letter-spacing:-.018em;}
+  h2{font-size:clamp(31px,4.5vw,62px);line-height:1.0;letter-spacing:-.016em;margin:0 0 30px;text-wrap:balance;}
+  h1 em,h2 em{font-style:normal;font-weight:800;color:var(--ember);}
+
+  /* section head: a hairline with the index sitting on it */
+  .eyebrow{
+    display:flex;align-items:center;gap:16px;margin:0 0 30px;
+    font-family:var(--mono);font-size:9.5px;font-weight:500;
+    letter-spacing:.17em;text-transform:uppercase;color:var(--accent);
+  }
+  .eyebrow s{flex:1;height:1px;background:var(--rule);text-decoration:none;min-width:24px;}
+  .eyebrow u{text-decoration:none;color:var(--paper-mute);letter-spacing:.2em;}
+
+  /* the oversized index, bleeding off the measure */
+  .idx{
+    position:absolute;top:-.30em;left:-.07em;z-index:-1;
+    font-family:var(--mono);font-weight:700;font-size:clamp(88px,12.5vw,186px);
+    line-height:1;letter-spacing:-.05em;color:var(--paper);opacity:.036;
+    pointer-events:none;user-select:none;
+  }
+
+  /* the copy is a stack of short declarative lines. it is set that way. */
+  .stack{margin:0;font-size:clamp(16.5px,1.28vw,19px);line-height:1.52;color:var(--paper-dim);max-width:44ch;}
+  .stack span{display:block;}
+  .stack + .stack{margin-top:24px;color:var(--paper-mute);}
+  .stack.tight span{line-height:1.46;}
+  /* the human lines step up into the serif. the argument, set. */
+  .stack em{
+    font-family:var(--display);font-style:normal;font-weight:600;color:var(--paper);
+    font-size:1.28em;line-height:1.24;letter-spacing:-.012em;
+    display:block;margin-block:.14em;
+  }
+
+  .points{list-style:none;margin:32px 0 0;padding:0;border-top:1px solid var(--rule);}
+  .points li{
+    border-bottom:1px solid var(--rule);padding:15px 0 15px 30px;position:relative;
+    font-size:14.5px;line-height:1.55;color:var(--paper-mute);
+  }
+  .points li::before{
+    content:"";position:absolute;left:0;top:24px;width:14px;height:1px;background:var(--accent);
+    transform-origin:left;transform:scaleX(.5);transition:transform 500ms var(--ease);
+  }
+  .points li:hover::before{transform:scaleX(1);}
+  .points li b{color:var(--paper);font-weight:600;}
+  .points + .stack{margin-top:26px;color:var(--paper-mute);}
+
+  .chain{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin-top:30px;}
+  .chain span{
+    font-family:var(--mono);font-size:9.5px;font-weight:500;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--paper);border:1px solid var(--rule);padding:9px 13px;
+  }
+  .chain i{font-style:normal;color:var(--accent);font-family:var(--mono);font-size:11px;}
+  .chain + .stack{margin-top:24px;}
+
+  .clubband{
+    display:flex;flex-wrap:wrap;align-items:baseline;gap:clamp(14px,3vw,34px);
+    margin-top:clamp(20px,3vh,32px);padding-top:16px;border-top:1px solid var(--rule);
+    font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--paper-mute);
+  }
+  .clubband b{color:var(--accent);font-weight:500;}
+  .clubband i{font-style:normal;color:var(--paper-dim);}
+  .clubband .est{
+    flex-basis:100%;font-size:10.5px;letter-spacing:.06em;text-transform:none;
+    color:var(--paper-mute);opacity:.85;padding-top:2px;
+  }
+  .clublogo{display:flex;align-items:center;gap:12px;margin-bottom:clamp(18px,2.6vh,28px);}
+  .clublogo img,.clublogo svg{height:44px;width:auto;display:block;}
+  /* some clubs only publish a mark on a light plate; without this it reads as a
+     white box floating on the dark ground */
+  .clublogo .plate{background:#f5f1e8;border-radius:7px;padding:6px 9px;display:flex;align-items:center;}
+  .clublogo .plate img{height:38px;}
+  .clublogo span{
+    font-family:var(--display);font-weight:700;font-size:clamp(19px,2.6vw,29px);color:var(--paper);
+    letter-spacing:-.018em;line-height:1;
+  }
+  .clublogo em{
+    font-style:normal;font-family:var(--mono);font-size:9px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--paper-mute);border-left:1px solid var(--rule);padding-left:12px;
+  }
+
+  /* ── hero ──────────────────────────────────────────────────────── */
+  .hero{position:relative;z-index:4;min-height:100svh;display:grid;align-content:center;padding:calc(var(--nav-h) + 3.5vh) 0 7vh;}
+  .kicker{
+    display:inline-flex;align-items:center;gap:11px;align-self:start;margin-bottom:clamp(28px,4vh,46px);
+    font-family:var(--mono);font-size:9.5px;font-weight:500;letter-spacing:.15em;
+    text-transform:uppercase;color:var(--paper-mute);
+  }
+  .kicker b{color:var(--paper);font-weight:500;}
+  .dot{width:5px;height:5px;border-radius:50%;background:var(--ember);box-shadow:0 0 12px var(--ember);flex:none;}
+  .ln{display:block;overflow:hidden;padding-bottom:.04em;}
+  .ln > b{display:block;font-weight:inherit;}
+  .hero .stack{margin-top:clamp(24px,3.4vh,36px);max-width:50ch;}
+  .actions{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(14px,2.4vw,34px);margin-top:clamp(26px,3.6vh,40px);}
+
+  /* the colophon strip. a masthead, not a feature grid. */
+  .facts{
+    display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+    margin-top:clamp(32px,4.6vh,58px);border-top:1px solid var(--rule);
+  }
+  .facts div{padding:17px 26px 0 0;border-right:1px solid var(--rule);}
+  .facts div:last-child{border-right:0;}
+  .facts dt{
+    font-family:var(--mono);font-size:8.5px;font-weight:500;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--paper-mute);margin:0 0 11px;
+  }
+  .facts dd{margin:0;font-family:var(--display);font-weight:600;font-size:clamp(15px,1.3vw,18px);color:var(--paper);line-height:1.2;letter-spacing:-.005em;}
+  @media (max-width:760px){
+    .facts{grid-template-columns:1fr;}
+    .facts div{border-right:0;border-bottom:1px solid var(--rule);padding:18px 0;}
+    .facts div:last-child{border-bottom:0;}
+  }
+  .scrollcue{
+    display:flex;align-items:center;gap:14px;margin-top:clamp(20px,3vh,34px);
+    font-family:var(--mono);font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--paper-mute);
+  }
+  .scrollcue s{display:block;width:58px;height:1px;background:linear-gradient(90deg,var(--ember),transparent);text-decoration:none;}
+
+  /* hero load choreography */
+  @keyframes rise{from{transform:translateY(106%);}to{transform:translateY(0);}}
+  @keyframes fade{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:none;}}
+  .hero .kicker,.hero .stack,.hero .actions,.hero .facts,.hero .scrollcue{opacity:0;animation:fade .9s var(--ease) forwards;}
+  .hero .kicker{animation-delay:.06s;}
+  .ln > b{transform:translateY(106%);animation:rise 1.05s var(--ease) forwards;}
+  .ln:nth-of-type(1) > b{animation-delay:.16s;}
+  .ln:nth-of-type(2) > b{animation-delay:.29s;}
+  .hero .stack:nth-of-type(1){animation-delay:.5s;}
+  .hero .stack:nth-of-type(2){animation-delay:.6s;}
+  .hero .actions{animation-delay:.72s;}
+  .hero .facts{animation-delay:.84s;}
+  .hero .scrollcue{animation-delay:.96s;}
+
+  /* ── beats ─────────────────────────────────────────────────────── */
+  .beat{position:relative;height:218vh;z-index:4;}
+  .stage{position:sticky;top:0;min-height:100svh;display:grid;align-items:center;padding:var(--nav-h) 0 6vh;}
+  .layout{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);gap:clamp(30px,5vw,88px);align-items:center;}
+  .beat[data-flip] .scene{order:2;}
+  .scene{
+    position:relative;
+    transform:translateY(calc((.5 - var(--p,0)) * 8vh)) scale(calc(.9 + var(--p,0) * .15));
+    opacity:calc(.34 + min(1, var(--p,0) / .42) * .66);
+    will-change:transform,opacity;
+  }
+  .scene .art{display:block;width:100%;height:auto;overflow:visible;}
+  .scene .art-m{display:none;}
+  .copy{
+    position:relative;
+    opacity:calc(min(1, max(0,(var(--p,0) - .1) * 3)));
+    transform:translateY(calc((1 - min(1,var(--p,0) * 1.8)) * 26px));
+    will-change:transform,opacity;
+  }
+  @media (max-width:980px){
+    .beat{height:190vh;}
+    .layout{grid-template-columns:1fr;gap:30px;}
+    .beat[data-flip] .scene{order:0;}
+    .idx{font-size:clamp(78px,20vw,132px);top:-.30em;}
+    /* the art is the weakest thing on a phone, so it takes the whole width and
+       stops being scaled down by the scroll transform on the way in */
+    /* Pinning a full-height stage only works while art + copy fit one screen.
+       With the art this size they do not, and the overflow would be unreachable
+       under a stuck stage. On stacked layouts the beat scrolls normally instead. */
+    .beat{height:auto;}
+    .stage{position:static;min-height:0;padding:8vh 0;}
+    .copy{opacity:1;transform:none;}
+    .scene{width:100vw;margin-left:calc(50% - 50vw);transform:none;opacity:1;}
+    .scene .art-d{display:none;}
+    .scene .art-m{display:block;}
+    .scene .art{width:auto;max-width:100%;max-height:58svh;margin-inline:auto;}
+  }
+  @media (max-width:640px){
+    /* on a phone the copy needs the other half, or the art slides under the nav */
+    .scene .art{max-height:48svh;}
+  }
+
+  /* ── beat 07, the hard cut ─────────────────────────────────────── */
+  .beat.flood{--accent:var(--ink);}
+  .beat.flood .stage::before{
+    content:"";position:absolute;inset:-11vh 0;z-index:-1;
+    background:linear-gradient(rgba(238,177,58,0) 0%, var(--gold) 13%, var(--gold) 87%, rgba(238,177,58,0) 100%);
+  }
+  .beat.flood .layout{grid-template-columns:1fr;justify-items:center;text-align:center;}
+  .beat.flood .copy{max-width:68ch;}
+  .beat.flood .idx{color:var(--ink);opacity:.055;left:auto;right:-.1em;}
+  .beat.flood .eyebrow{justify-content:center;color:rgba(10,8,6,.6);}
+  .beat.flood .eyebrow s{background:rgba(10,8,6,.24);max-width:80px;}
+  .beat.flood .eyebrow u{color:rgba(10,8,6,.42);}
+  .beat.flood h2{color:var(--ink);}
+  .beat.flood .stack{color:rgba(10,8,6,.68);max-width:none;}
+  .beat.flood .stack + .stack{color:rgba(10,8,6,.58);}
+  .beat.flood .stack em{color:var(--ink);}
+  .yeah{
+    display:block;margin:clamp(26px,4vh,44px) 0 clamp(24px,3.6vh,38px);
+    font-family:var(--display);font-style:normal;font-weight:800;color:var(--ink);
+    font-size:clamp(38px,8.6vw,116px);line-height:.94;letter-spacing:-.022em;
+  }
+  .yeah b{display:block;font-weight:800;}
+  .yeah b:last-child{color:#8a2f0c;}
+
+  /* chrome has to survive the flood, so it inverts while beat 07 is in view */
+  html[data-flood] #progress{background:var(--ink);box-shadow:none;}
+  html[data-flood] header.nav.stuck{background:rgba(238,177,58,.84);border-bottom-color:rgba(10,8,6,.16);}
+  html[data-flood] .mark b{color:var(--ink);}
+  html[data-flood] .mark i{color:rgba(10,8,6,.55);border-left-color:rgba(10,8,6,.2);}
+  html[data-flood] .nav .btn{--btn-bg:var(--ink);--btn-fg:var(--gold);}
+  html[data-flood] .nav .btn::after{background:var(--paper);}
+  html[data-flood] .nav .btn:hover{color:var(--ink);box-shadow:none;}
+  html[data-flood] .rail a{color:rgba(10,8,6,.42);}
+  html[data-flood] .rail a:hover,html[data-flood] .rail a[aria-current="true"]{color:var(--ink);}
+  html[data-flood] .rail a[aria-current="true"] s{background:var(--ink);}
+  html[data-flood] #guides{opacity:.3;background-image:linear-gradient(90deg, rgba(10,8,6,.06) 1px, transparent 1px);}
+
+  /* ── what we believe: a numbered editorial list, not a card grid ── */
+  .believe{position:relative;z-index:4;padding:clamp(120px,19vh,220px) 0 clamp(80px,13vh,150px);}
+  .believe h3{font-size:clamp(25px,3vw,42px);line-height:1.08;letter-spacing:-.016em;margin:0 0 clamp(38px,6vh,62px);max-width:19ch;}
+  .creeds{border-top:1px solid var(--rule);}
+  .creed{
+    display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,64px);align-items:baseline;
+    border-bottom:1px solid var(--rule);padding:clamp(20px,2.6vh,30px) 0;
+    transition:padding-left 520ms var(--ease);
+  }
+  .creed:hover{padding-left:14px;}
+  .creed .n{
+    font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.14em;
+    color:var(--paper-mute);transition:color 380ms ease;padding-top:.5em;
+  }
+  .creed:hover .n{color:var(--ember);}
+  .creed p{
+    margin:0;font-family:var(--display);font-weight:600;font-size:clamp(20px,2.6vw,34px);
+    line-height:1.06;color:var(--paper);letter-spacing:-.022em;text-wrap:balance;
+  }
+  .believe .tail{
+    margin-top:clamp(34px,5vh,54px);font-size:clamp(17px,1.5vw,20px);
+    color:var(--paper-dim);max-width:46ch;
+  }
+  .believe .tail em{
+    font-family:var(--display);font-style:normal;font-weight:600;color:var(--paper);
+    font-size:1.3em;line-height:1.2;display:block;margin-top:.16em;letter-spacing:-.014em;
+  }
+
+  /* ── close ─────────────────────────────────────────────────────── */
+  .close{position:relative;z-index:4;min-height:100svh;display:grid;align-content:center;text-align:center;padding:13vh 0;}
+  .close .eyebrow{justify-content:center;}
+  .close .eyebrow s{max-width:70px;}
+  .close h2{font-size:clamp(34px,6.8vw,100px);line-height:.98;max-width:19ch;margin-inline:auto;}
+  .close .stack{margin:0 auto;text-align:center;}
+  .close .actions{justify-content:center;}
+  .close .fineprint{
+    margin-top:clamp(30px,5vh,52px);font-family:var(--mono);font-size:9px;
+    letter-spacing:.15em;text-transform:uppercase;color:var(--paper-mute);
+  }
+
+  /* ── footer ────────────────────────────────────────────────────── */
+  footer{position:relative;z-index:4;border-top:1px solid var(--rule);padding:56px 0 70px;}
+  .foot{display:flex;flex-wrap:wrap;gap:26px;justify-content:space-between;align-items:baseline;}
+  .foot p{margin:0;font-family:var(--mono);font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--paper-mute);}
+  .note{
+    margin-top:40px;padding-top:24px;border-top:1px solid var(--rule);
+    max-width:80ch;font-size:12.5px;line-height:1.72;color:var(--paper-mute);
+  }
+  .note b{color:var(--paper-dim);font-weight:600;}
+  .flag{
+    display:inline-flex;align-items:center;gap:8px;vertical-align:middle;
+    font-family:var(--mono);font-size:8px;font-weight:500;letter-spacing:.14em;
+    text-transform:uppercase;padding:5px 10px;
+    border:1px solid rgba(239,90,42,.42);color:var(--ember);
+  }
+  .flag::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--ember);}
+
+
+  /* ── print: the pitch has to survive the tab closing ───────────────
+     A dark scroll cinematic is not a document. On paper this becomes a
+     typeset leave-behind on white, same type system, argument intact.
+     The scenes are dark-on-dark illustration and would print as toner
+     blocks, so they come out. What's left is the case, on 2 sides. */
+  @media print{
+    @page{ margin:16mm 15mm; }
+    html,body{ background:#fff !important; color:#141414 !important; }
+    #dust,#wash,#vignette,#grain,#guides,#progress,header.nav,nav.rail,.scrollcue,.scene,.kicker{ display:none !important; }
+
+    .shell{ width:100% !important; }
+    .hero{ min-height:0 !important; padding:0 0 6mm !important; display:block !important; }
+    .beat{ height:auto !important; }
+    .stage{ position:static !important; min-height:0 !important; padding:0 !important; display:block !important; }
+    .layout{ display:block !important; }
+    .copy{ opacity:1 !important; transform:none !important; max-width:none !important; }
+    .beat,.believe,.close,.creed{ break-inside:avoid; page-break-inside:avoid; }
+    .beat{ padding:0 0 5mm; }
+
+    .print-only{ display:block !important; }
+    .print-head{
+      display:flex !important; align-items:baseline; justify-content:space-between;
+      border-bottom:1.5pt solid #141414; padding-bottom:2.5mm; margin-bottom:7mm;
+    }
+    .print-head b{ font-family:var(--display); font-size:15pt; color:#141414; font-weight:700; }
+    .print-head span{ font-family:var(--mono); font-size:7pt; letter-spacing:.16em; text-transform:uppercase; color:#5a5a5a; }
+
+    h1{ font-size:30pt !important; line-height:1.02 !important; color:#141414 !important; margin:0 0 4mm; }
+    h1 em{ color:#a3268c !important; }
+    h2{ font-size:15pt !important; line-height:1.08 !important; color:#141414 !important; margin:0 0 2.5mm; }
+    h3{ font-size:15pt !important; color:#141414 !important; }
+    .stack{ font-size:9.5pt !important; line-height:1.42 !important; color:#333 !important; max-width:none !important; margin:0 0 2.5mm; }
+    .stack + .stack{ color:#4a4a4a !important; margin-top:2mm; }
+    .stack em{ font-size:1.16em !important; color:#141414 !important; margin:0 !important; }
+    .eyebrow{ font-size:6.5pt !important; color:#a3268c !important; margin:0 0 2mm !important; gap:8px; }
+    .eyebrow s{ background:#c9c9c9 !important; }
+    .eyebrow u{ color:#6a6a6a !important; }
+    .idx{ display:none !important; }
+
+    .points{ border-top:.5pt solid #d4d4d4 !important; margin:2.5mm 0 0 !important; }
+    .points li{ background:none !important; font-size:8.5pt !important; line-height:1.35 !important;
+                color:#4a4a4a !important; padding:1.6mm 0 1.6mm 6mm !important; border-bottom:.5pt solid #e4e4e4 !important; }
+    .points li::before{ background:#a3268c !important; top:3.4mm !important; transform:none !important; width:4mm !important; }
+    .points li b{ color:#141414 !important; }
+    .chain span{ color:#141414 !important; border-color:#c9c9c9 !important; font-size:6.5pt !important; padding:1mm 2mm !important; }
+    .chain i{ color:#a3268c !important; }
+
+    .facts{ border-top:.5pt solid #d4d4d4 !important; margin-top:4mm !important; }
+    .facts div{ background:none !important; border-right:.5pt solid #e4e4e4 !important; padding:2mm 4mm 0 0 !important; }
+    .facts dt{ color:#6a6a6a !important; font-size:6pt !important; }
+    .facts dd{ color:#141414 !important; font-size:9.5pt !important; }
+
+    /* the gold flood is a screen effect. on paper it is just the standard. */
+    .beat.flood .stage::before{ display:none !important; }
+    .beat.flood .layout{ text-align:left !important; justify-items:start !important; }
+    .beat.flood .eyebrow{ justify-content:flex-start !important; }
+    .yeah{ font-size:26pt !important; margin:3mm 0 !important; color:#141414 !important; }
+    .yeah b:last-child{ color:#a3268c !important; }
+
+    .believe{ padding:6mm 0 0 !important; border-top:.5pt solid #d4d4d4; }
+    .believe h3{ margin-bottom:4mm !important; }
+    .creeds{ border-top:.5pt solid #d4d4d4 !important; }
+    .creed{ border-bottom:.5pt solid #e4e4e4 !important; padding:2mm 0 !important; gap:6mm !important; }
+    .creed .n{ color:#a3268c !important; font-size:6.5pt !important; }
+    .creed p{ color:#141414 !important; font-size:11pt !important; line-height:1.14 !important; }
+    .believe .tail{ color:#333 !important; font-size:9.5pt !important; margin-top:4mm !important; }
+    .believe .tail em{ color:#141414 !important; }
+
+    .close{ min-height:0 !important; padding:7mm 0 0 !important; text-align:left !important; }
+    .close h2{ font-size:22pt !important; max-width:none !important; margin-inline:0 !important; }
+    .close .stack{ margin:0 !important; text-align:left !important; }
+    .close .eyebrow{ justify-content:flex-start !important; }
+    .close .eyebrow s:first-of-type{ display:none !important; }
+    .actions{ display:none !important; }
+    .close .fineprint{ display:none !important; }
+
+    .print-cta{
+      display:block !important; margin-top:5mm; padding-top:3mm; border-top:1.5pt solid #141414;
+      font-family:var(--mono); font-size:8.5pt; line-height:1.7; color:#141414;
+    }
+    .print-cta b{ font-family:var(--display); font-size:12pt; font-weight:700; display:block; margin-bottom:1.5mm; }
+    .print-cta span{ color:#5a5a5a; }
+
+    footer{ border:0 !important; padding:4mm 0 0 !important; }
+    .foot,.note{ display:none !important; }
+    .print-foot{
+      display:block !important; border-top:.5pt solid #d4d4d4; padding-top:2mm;
+      font-family:var(--mono); font-size:6.5pt; letter-spacing:.14em; text-transform:uppercase; color:#8a8a8a;
+    }
+  }
+  .print-only{ display:none; }
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .scene,.copy{transform:none !important;opacity:1 !important;}
+    .hero .kicker,.hero .stack,.hero .actions,.hero .facts,.hero .scrollcue{opacity:1;animation:none;}
+    .ln > b{transform:none;animation:none;}
+    *{animation-duration:.001ms !important;transition-duration:.001ms !important;}
+  }
+</style>
+<noscript><style>
+  /* The scroll driver sets --p, so with no JS every beat's copy stayed at
+     opacity 0 and a desktop reader got the art and none of the argument.
+     Static, readable, no animation. */
+  .beat{height:auto !important;}
+  .stage{position:static !important; min-height:0 !important; padding:10vh 0 !important;}
+  .copy,.scene{opacity:1 !important; transform:none !important;}
+  .hero .kicker,.hero .stack,.hero .actions,.hero .facts,.hero .scrollcue{opacity:1 !important; animation:none !important;}
+  .ln > b{transform:none !important; animation:none !important;}
+</style></noscript>
+
+
+<!--hyfy:css:start-->
+<style>
+  /* Shapes the doc uses that the flagship had no rule for. */
+  .kick{margin:26px 0 0;font-family:var(--display);font-size:clamp(15px,1.7vw,20px);
+        line-height:1.3;color:var(--accent);letter-spacing:.005em;}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));
+         gap:12px;margin:24px 0 0;}
+  .card{border:1px solid var(--rule);background:rgba(247,240,228,.03);padding:16px 18px;}
+  .card b{display:block;font-family:var(--display);font-size:15px;color:var(--paper);}
+  .card span{display:block;margin-top:6px;font-size:13px;color:var(--paper-dim);}
+  .doc{max-width:74ch;margin-inline:auto;padding:clamp(80px,10vh,140px) 0 90px;}
+  .doc h1{font-family:var(--display);font-size:clamp(30px,4.6vw,52px);margin:0 0 10px;}
+  .doc h2{font-family:var(--display);font-size:clamp(17px,2vw,22px);margin:44px 0 10px;color:var(--paper);}
+  .doc p{color:var(--paper-dim);line-height:1.72;margin:0 0 14px;}
+  .doc li{color:var(--paper-dim);line-height:1.72;margin:0 0 8px;}
+  .doc .stamp{font-family:var(--display);font-size:11px;letter-spacing:.2em;
+              text-transform:uppercase;color:var(--accent);margin:0 0 26px;}
+  .prose{padding:clamp(70px,9vh,120px) 0 40px;}
+  .prose .shift{border-top:1px solid var(--rule);padding:34px 0 6px;}
+  .prose .shift .n{font-family:var(--display);font-size:11px;letter-spacing:.22em;
+                   text-transform:uppercase;color:var(--accent);}
+  .prose .shift h3{font-family:var(--display);font-size:clamp(20px,2.6vw,30px);
+                   margin:8px 0 12px;color:var(--paper);}
+  .navlinks{display:flex;gap:22px;align-items:center;font-family:var(--display);
+            font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--paper-mute);}
+  .navlinks a{text-decoration:none;color:inherit;white-space:nowrap;padding:6px 0;}
+  .navlinks a:hover,.navlinks a[aria-current="page"]{color:var(--accent);}
+  /* The bar had no give: between roughly 1100 and 1250 the links pushed the
+     CTA off the right edge and nothing scrolled, so "Build With HYFY" was
+     clipped with no way to reach it (Matt, Safari, 2026-08-22). The mark and
+     the button never shrink; the links absorb the squeeze and scroll. min-width
+     is the load-bearing bit - a flex item will not shrink past its content
+     without it, which is why overflow-x alone did nothing here. */
+  .nav .shell{gap:14px;}
+  .nav .mark{flex:none;}
+  .nav .btn{flex:none;}
+  .navlinks{flex:1 1 auto;min-width:0;overflow-x:auto;scrollbar-width:none;
+            -webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;}
+  .navlinks::-webkit-scrollbar{display:none;}
+  /* The flagship and every club page carry a lockup line the other pages do
+     not - about 180px of it. It is the first thing to go when space is short. */
+  @media (max-width:1320px){.nav .mark i{display:none;}}
+  @media (max-width:1100px){
+    .nav .shell{flex-wrap:wrap;gap:8px 16px;}
+    .navlinks{width:100%;order:3;overflow-x:auto;gap:18px;scrollbar-width:none;
+              -webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;}
+    .navlinks::-webkit-scrollbar{display:none;}
+  }
+  /* Keyed to the block itself, not to its parent: this markup sits inside the
+     flagship's own <footer> as well as the generated footer.site, and the
+     earlier parent-scoped rules silently did nothing in the former. */
+  .ftcols{display:grid;grid-template-columns:1.5fr repeat(4,minmax(0,1fr));
+          gap:30px 26px;align-items:start;margin-top:8px;}
+  /* The flagship footer already carries the mark and tagline in .foot, so it
+     renders four columns and must not reserve a fifth for a brand block that
+     is not there - that was the dead space on the right. */
+  .ftcols.nobrand{grid-template-columns:repeat(4,minmax(0,1fr));}
+  .ftcols h4{font-family:var(--display);font-size:10.5px;letter-spacing:.2em;
+             text-transform:uppercase;color:var(--paper-mute);margin:0 0 14px;}
+  .ftcols a,.ftcols span.plain{display:block;margin:0 0 9px;font-size:13.5px;
+             line-height:1.45;color:var(--paper-dim);text-decoration:none;}
+  .ftcols a:hover{color:var(--accent);}
+  .ftcols .ftbrand b{font-family:var(--display);font-size:16px;color:var(--paper);display:block;margin:0 0 10px;}
+  /* Fixed height, width follows: the lockup is never restretched (v1.2 §02). */
+  .ftcols .ftbrand img.ftmark{height:36px;width:auto;display:block;margin:0 0 14px;}
+  .mark img.wordmark{height:32px;width:auto;flex:none;display:block;}
+  .ftcols .ftbrand p{margin:0 0 8px;font-size:13.5px;line-height:1.55;color:var(--paper-dim);}
+  .ftcols .ftbrand a{display:inline;margin:0;color:var(--paper);text-decoration:underline;
+                     text-underline-offset:3px;text-decoration-thickness:1px;}
+  .ftlegal{margin:34px 0 0;padding-top:20px;border-top:1px solid var(--rule-soft);
+           font-family:var(--mono);font-size:9px;letter-spacing:.13em;
+           text-transform:uppercase;color:var(--paper-mute);}
+  footer.site{border-top:1px solid var(--rule);padding:56px 0 60px;margin-top:40px;}
+  @media (max-width:1000px){.ftcols,.ftcols.nobrand{grid-template-columns:repeat(3,minmax(0,1fr));}}
+  @media (max-width:720px){.ftcols,.ftcols.nobrand{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 20px;}}
+  @media (max-width:460px){.ftcols,.ftcols.nobrand{grid-template-columns:1fr;}}
+  section[id],div[id]{scroll-margin-top:var(--nav-h);}
+</style>
+<!--hyfy:css:end--><style id="club-theme">:root{--ember:#7777a7;--gold:#0c9ce4;}</style><script id="club-data" type="application/json">{"slug":"kalamazoo-growlers","name":"Kalamazoo Growlers","short":"the Growlers","league":"Northwoods","city":"Kalamazoo","state":"MI","venue":"Homer Stryker Field","sport":"baseball","accent":"#0c0c3c","accent2":"#0c9ce4","logo":"../../clubs/kalamazoo-growlers.png","hero":null,"facts":[{"label":"Venue","value":"Homer Stryker Field","source":"Est. (strong-draw club)"},{"label":"Capacity","value":"3500","source":"Est. (strong-draw club)"},{"label":"Avg attendance","value":"2600","source":"Est. (strong-draw club)"},{"label":"Home dates","value":"36","source":"Est. (strong-draw club)"}],"brandSource":"https://assets.northwoodsleague.com/wp-content/uploads/sites/13/2022/11/iTunesArtwork.png","brandConfidence":"sampled from the club's own mark","logoPlate":true}</script></head>
+<body id="top">
+
+<!-- ══ SPORT KIT ══════════════════════════════════════════════════════
+     Beats 01 and 02 show the keepsakes a fan actually keeps. Which objects
+     those are depends on the sport, and a hockey club reading "a baseball cap"
+     is the page telling them it was written for someone else.
+
+     One geometry per object, instanced with <use> at all three placements, so
+     the sport swap is an href and a new sport is one entry here. Outlines are
+     currentColor and the accent dot is --pop, which is how the same cap comes
+     out ember on 01 and gold on 02. Boxes are fixed on purpose: an emblem is
+     156x110 and a garment is 136x140, both sitting on their contact shadow, so
+     every sport drops into the same placement transform. -->
+<svg id="sportkit" width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+<defs>
+  <linearGradient id="rubberG" x1=".2" y1="0" x2=".8" y2="1">
+    <stop offset="0" stop-color="#3a352f"/><stop offset=".5" stop-color="#1d1a17"/><stop offset="1" stop-color="#0e0c0b"/>
+  </linearGradient>
+  <linearGradient id="rubberT" x1=".18" y1="0" x2=".82" y2="1">
+    <stop offset="0" stop-color="#4a443c"/><stop offset=".55" stop-color="#26221d"/><stop offset="1" stop-color="#141110"/>
+  </linearGradient>
+  <linearGradient id="scarfG" x1=".1" y1="0" x2=".9" y2="1">
+    <stop offset="0" stop-color="#4a3826"/><stop offset=".5" stop-color="#2c2118"/><stop offset="1" stop-color="#171210"/>
+  </linearGradient>
+
+  <!-- ── baseball · a ball cap and a jersey ── -->
+  <!--opt:kit:baseball-->
+  <g id="kit-baseball-emblem"><g transform="translate(52 1)">
+    <ellipse cx="34" cy="102" rx="62" ry="7" fill="#000" opacity=".42"/>
+    <path d="M14 66 C-16 68 -40 76 -48 85 C-52 89 -49 93 -41 93 L-2 93 C8 93 15 86 16 76 Z" fill="url(#billG)"/>
+    <path d="M14 66 C-16 68 -40 76 -48 85 C-52 89 -49 93 -41 93 L-2 93 C8 93 15 86 16 76 Z" fill="none" stroke="currentColor" stroke-opacity=".5" stroke-width="1.6"/>
+    <path d="M-44 90 C-24 84 -4 82 14 82" fill="none" stroke="#08080e" stroke-opacity=".55" stroke-width="2.4"/>
+    <path d="M-40 79 C-22 74 -6 72 12 72" fill="none" stroke="currentColor" stroke-opacity=".3" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="M0 92 C0 50 24 26 52 26 C80 26 104 50 104 92 C104 96 101 98 97 98 L7 98 C3 98 0 96 0 92 Z" fill="url(#crownG)"/>
+    <path d="M0 92 C0 50 24 26 52 26 C80 26 104 50 104 92 C104 96 101 98 97 98 L7 98 C3 98 0 96 0 92 Z" fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1.8"/>
+    <g fill="none" stroke="#08080e" stroke-opacity=".4" stroke-width="1.6"><path d="M52 27 L52 97 M27 34 C35 56 35 78 34 97 M77 34 C69 56 69 78 70 97"/></g>
+    <g fill="none" stroke="currentColor" stroke-opacity=".26" stroke-width=".9" stroke-dasharray="2.5 3"><path d="M55 28 L55 96 M30 35 C38 57 38 78 37 96 M80 35 C72 57 72 78 73 96"/></g>
+    <path d="M8 88 C26 80 78 80 96 88" fill="none" stroke="currentColor" stroke-opacity=".22" stroke-width=".9" stroke-dasharray="2.5 3"/>
+    <g fill="#08080e" fill-opacity=".5"><circle cx="40" cy="46" r="2"/><circle cx="64" cy="46" r="2"/></g>
+    <path d="M14 62 C24 40 40 30 52 29" fill="none" stroke="#f4f6fb" stroke-opacity=".12" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="52" cy="26" r="5.5" style="fill:var(--pop,#18d7f2)"/>
+    <circle cx="50.4" cy="24.4" r="1.8" fill="#fff2d8" opacity=".55"/>
+  </g></g>
+
+  <g id="kit-baseball-garment"><g transform="translate(-1 2)">
+    <ellipse cx="68" cy="132" rx="52" ry="6" fill="#000" opacity=".4"/>
+    <path d="M40 18 L14 34 L2 62 L22 72 L30 56 L30 128 L106 128 L106 56 L114 72 L134 62 L122 34 L96 18 L86 30 C78 40 58 40 50 30 Z" fill="url(#knitG)"/>
+    <path d="M40 18 L14 34 L2 62 L22 72 L30 56 L30 128 L106 128 L106 56 L114 72 L134 62 L122 34 L96 18 L86 30 C78 40 58 40 50 30 Z" fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1.8" stroke-linejoin="round"/>
+    <path d="M40 18 L50 30 C58 40 78 40 86 30 L96 18" fill="none" stroke="currentColor" stroke-opacity=".5" stroke-width="3"/>
+    <g stroke="currentColor" stroke-opacity=".3" stroke-width=".9"><path d="M44 22 L52 32 M50 20 L58 31 M78 31 L86 20 M84 32 L92 22"/></g>
+    <path d="M6 64 L24 72" fill="none" stroke="currentColor" stroke-opacity=".45" stroke-width="3"/>
+    <path d="M112 72 L130 64" fill="none" stroke="currentColor" stroke-opacity=".45" stroke-width="3"/>
+    <g fill="none" stroke="#08080e" stroke-opacity=".34" stroke-width="1.4"><path d="M36 60 C40 84 40 108 38 126 M100 60 C96 84 96 108 98 126"/></g>
+    <path d="M30 56 C44 48 60 46 68 46" fill="none" stroke="#f4f6fb" stroke-opacity=".1" stroke-width="4" stroke-linecap="round"/>
+    <text x="68" y="106" text-anchor="middle" fill="#18d7f2" fill-opacity=".92" font-family="Martian Mono,monospace" font-size="42" font-weight="700">9</text>
+    <text x="68" y="106" text-anchor="middle" fill="none" stroke="#08080e" stroke-opacity=".45" stroke-width="1.2" font-family="Martian Mono,monospace" font-size="42" font-weight="700">9</text>
+  </g></g>
+
+  <!-- ── hockey · a game puck and a laced sweater ──
+       Vulcanised rubber, so no specular hotspot the way the glazed mug has one:
+       a puck reads as a puck because the edge is diamond-cut and the top face is
+       matte. Same upper-left key light as every other object in the case. -->
+  <!--/opt:kit:baseball-->
+
+  
+  
+  <clipPath id="kit-hk-wall"><path d="M20 52 L20 82 A58 20 0 0 0 136 82 L136 52 A58 20 0 0 1 20 52 Z"/></clipPath>
+</defs>
+</svg>
+
+<canvas id="dust" aria-hidden="true"></canvas>
+<div id="wash" aria-hidden="true"></div>
+<div id="vignette" aria-hidden="true"></div>
+<div id="guides" aria-hidden="true"></div>
+<div id="grain" aria-hidden="true"></div>
+<div id="progress" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="shell">
+    <a class="mark" href="#top" aria-label="HYFY Labs, back to top">
+      <img class="wordmark" src="../../img/brand/hyfy-labs-wordmark.png" alt="HYFY Labs" width="113" height="32">
+      <i data-club="lockup">Own the Relationship</i>
+    </a>
+    <nav class="navlinks" aria-label="Sections">
+        <a href="../../live-experiences/index.html">Live Experiences</a>
+        <a href="../../collectibles/index.html">Collectibles</a>
+        <a href="../../hype-streetwear/index.html">Hype + Streetwear</a>
+        <a href="../../what-we-believe/index.html">What We Believe</a>
+        <a href="../../how-we-work/index.html">How We Work</a>
+    </nav>
+    <a class="btn" href="https://calendly.com/matt-kramer-epm/hyfy-discovery-call?utm_source=hyfy-pitch&utm_medium=page&utm_campaign=kalamazoo-growlers" target="_blank" rel="noopener"><span>Build With HYFY</span><span class="arw">&rarr;</span></a>
+  </div>
+</header>
+
+<nav class="rail" id="rail" aria-label="Sections">
+  <a href="#b1"><em>Life beyond the sale</em><s></s>01</a>
+  <a href="#b2"><em>Identity</em><s></s>02</a>
+  <a href="#b3"><em>Participation</em><s></s>03</a>
+  <a href="#b4"><em>Rented or earned</em><s></s>04</a>
+  <a href="#b5"><em>Human connection</em><s></s>05</a>
+  <a href="#b6"><em>Audience to belonging</em><s></s>06</a>
+  <a href="#b7"><em>The HYFY test</em><s></s>07</a>
+</nav>
+
+<!-- ══ HERO ═══════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="shell">
+    <div class="print-head print-only">
+      <b>HYFY Labs</b>
+      <span>Connected merch &nbsp;·&nbsp; First-party fan data</span>
+    </div>
+    <span class="kicker"><span class="dot"></span> <b data-club="kicker">HYFY Labs</b></span>
+    <h1>
+      <span class="ln"><b>Own the Relationship.</b></span>
+      <span class="ln"><b><em>Not the Algorithm.</em></b></span>
+    </h1>
+    <p class="stack">
+      <span>The world's most valuable organizations don't just attract customers.</span>
+      <span>They build communities around shared identity, meaningful experiences, and lasting relationships.</span>
+    </p>
+    <p class="stack">
+      <span>HYFY connects products, people, ownership, events, and experiences into living ecosystems designed for participation.</span>
+      <span><em>Technology shouldn't replace human connection. It should amplify it.</em></span>
+    </p>
+    <div class="actions">
+      <a class="btn" href="#start"><span>Build something worth belonging to</span><span class="arw">&rarr;</span></a>
+      <a class="lnk" href="#b1"><span>See how it works</span><span class="arw">&darr;</span></a>
+    </div>
+    <dl class="facts">
+      <div><dt>Products</dt><dd>People keep them</dd></div>
+      <div><dt>Experiences</dt><dd>People remember them</dd></div>
+      <div><dt>Relationships</dt><dd>You own them</dd></div>
+    </dl>
+    <div class="clubband" id="clubband" hidden></div>
+    <div class="scrollcue"><s></s> Scroll</div>
+  </div>
+</section>
+
+<main>
+
+<!-- ══ 01 LIFE BEYOND THE SALE ════════════════════════════════════ -->
+<section class="beat" id="b1" data-accent="ember">
+  <div class="stage"><div class="shell layout">
+    <div class="scene">
+      <svg class="art art-d" viewBox="30 60 740 400" role="img" aria-label="A product lifecycle rising from sale through ownership, experience and identity">
+        <defs>
+          <linearGradient id="spineG" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0" stop-color="#f43cd0" stop-opacity=".35"/><stop offset="1" stop-color="#18d7f2"/>
+          </linearGradient>
+          <radialGradient id="warm1" cx=".5" cy=".5" r=".5">
+            <stop offset="0" stop-color="#f43cd0" stop-opacity=".22"/><stop offset="1" stop-color="#f43cd0" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="gl1" x="-70%" y="-70%" width="240%" height="240%">
+            <feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <ellipse cx="420" cy="280" rx="360" ry="180" fill="url(#warm1)"/>
+
+        <!-- where most brands stop -->
+        <path d="M148 386 C240 392 330 398 470 402" fill="none" stroke="#3e67ff" stroke-opacity=".38" stroke-width="1.4" stroke-dasharray="4 6"/>
+        <g font-family="Martian Mono,monospace">
+          <text x="300" y="428" text-anchor="middle" fill="#4a5da8" font-size="10.5" letter-spacing="1.82">WHERE MOST BRANDS STOP</text>
+          <text data-monly x="330" y="768" text-anchor="middle" fill="#4a5da8" font-size="15" letter-spacing="2.6">WHERE MOST BRANDS STOP</text>
+        </g>
+        <g fill="#3e67ff" fill-opacity=".4">
+          <circle cx="470" cy="402" r="2"/><circle cx="504" cy="404" r="1.6" fill-opacity=".26"/><circle cx="536" cy="406" r="1.2" fill-opacity=".14"/>
+        </g>
+
+        <!-- the spine -->
+        <polyline points="148,386 314,318 480,250 646,182" fill="none" stroke="url(#spineG)" stroke-width="2.4" filter="url(#gl1)"/>
+        <!-- the product at the start: a cap and a jersey, no sport named -->
+        <use data-kit="emblem" href="#kit-baseball-emblem" transform="translate(24.96 261.48) scale(.52)" style="color:#f43cd0;--pop:#18d7f2"/>
+        <use data-kit="garment" href="#kit-baseball-garment" transform="translate(124.48 255.04) scale(.48)" style="color:#f43cd0;--pop:#18d7f2"/>
+        <line x1="110" y1="318" x2="142" y2="372" stroke="#f43cd0" stroke-opacity=".28" stroke-dasharray="3 4"/>
+
+        <!-- the four nodes -->
+        <g font-family="Martian Mono,monospace" text-anchor="middle">
+          <g><circle cx="148" cy="386" r="7" fill="#f43cd0" filter="url(#gl1)"/>
+             <text x="148" y="352" fill="#bcc2d2" font-size="11" letter-spacing="1.82">PRODUCT</text></g>
+          <g><circle cx="314" cy="318" r="7" fill="#f65cd6" filter="url(#gl1)"/>
+             <text x="314" y="298" fill="#bcc2d2" font-size="11" letter-spacing="1.82">OWNERSHIP</text>
+             <text x="314" y="344" fill="#686f82" font-size="10">who has it now</text></g>
+          <g><circle cx="480" cy="250" r="7.5" fill="#ff8ae0" filter="url(#gl1)"/>
+             <text x="480" y="230" fill="#bcc2d2" font-size="11" letter-spacing="1.82">EXPERIENCE</text>
+             <text x="480" y="276" fill="#686f82" font-size="10">what it unlocks</text></g>
+          <g><circle cx="646" cy="182" r="9" fill="#18d7f2" filter="url(#gl1)"/>
+             <circle cx="646" cy="182" r="22" fill="none" stroke="#18d7f2" stroke-opacity=".4"/>
+             <circle cx="646" cy="182" r="34" fill="none" stroke="#18d7f2" stroke-opacity=".16"/>
+             <text x="646" y="146" fill="#f2f4fa" font-size="11.5" letter-spacing="1.82">IDENTITY</text>
+             <text x="646" y="228" fill="#686f82" font-size="10">what it means</text></g>
+        </g>
+      </svg>
+      <svg class="art art-m" viewBox="20 0 440 560" role="img" aria-label="A product lifecycle rising from sale through ownership, experience and identity">
+        <ellipse cx="240" cy="300" rx="230" ry="270" fill="url(#warm1)"/>
+        <use data-kit="emblem" href="#kit-baseball-emblem" transform="translate(269.84 17.42) scale(.58)" style="color:#f43cd0;--pop:#18d7f2"/>
+        <use data-kit="garment" href="#kit-baseball-garment" transform="translate(372.5 25) scale(.5)" style="color:#f43cd0;--pop:#18d7f2"/>
+        <path d="M90 90 C160 118 214 130 276 134" fill="none" stroke="#3e67ff" stroke-opacity=".38" stroke-width="2" stroke-dasharray="5 7"/>
+        <g fill="#3e67ff" fill-opacity=".34"><circle cx="276" cy="134" r="3"/><circle cx="300" cy="137" r="2.2" fill-opacity=".2"/></g>
+        <polyline points="90,90 90,230 90,370 90,510" fill="none" stroke="url(#spineG)" stroke-width="4" filter="url(#gl1)"/>
+        <g font-family="Martian Mono,monospace">
+          <circle cx="90" cy="90" r="8" fill="#f43cd0" filter="url(#gl1)"/>
+          <text x="126" y="84" fill="#bcc2d2" font-size="15" letter-spacing="2.4">PRODUCT</text>
+          <text x="126" y="170" fill="#4a5da8" font-size="12.5" letter-spacing="2">WHERE MOST BRANDS STOP</text>
+          <circle cx="90" cy="230" r="8" fill="#f65cd6" filter="url(#gl1)"/>
+          <text x="126" y="224" fill="#bcc2d2" font-size="15" letter-spacing="2.4">OWNERSHIP</text>
+          <text x="126" y="248" fill="#686f82" font-size="12.5">who has it now</text>
+          <circle cx="90" cy="370" r="8.5" fill="#ff8ae0" filter="url(#gl1)"/>
+          <text x="126" y="364" fill="#bcc2d2" font-size="15" letter-spacing="2.4">EXPERIENCE</text>
+          <text x="126" y="388" fill="#686f82" font-size="12.5">what it unlocks</text>
+          <circle cx="90" cy="510" r="10" fill="#18d7f2" filter="url(#gl1)"/>
+          <circle cx="90" cy="510" r="24" fill="none" stroke="#18d7f2" stroke-opacity=".4"/>
+          <circle cx="90" cy="510" r="38" fill="none" stroke="#18d7f2" stroke-opacity=".16"/>
+          <text x="146" y="504" fill="#f2f4fa" font-size="16" letter-spacing="2.4">IDENTITY</text>
+          <text x="146" y="528" fill="#686f82" font-size="12.5">what it means</text>
+        </g>
+      </svg>
+    </div>
+    <div class="copy">
+      <span class="idx" aria-hidden="true">01</span>
+      <p class="eyebrow">01<u>Beyond the sale</u><s></s></p>
+      <h2>Every Product Has a Life Beyond the Sale.</h2>
+      <p class="stack">
+        <span><em>A purchase isn't the end of the journey. It's the beginning.</em></span>
+        <span>Physical products shouldn't disappear after they're sold.</span>
+      </p>
+      <ul class="points">
+        <li><b>Every product has a history.</b></li>
+        <li><b>Every owner adds to its story.</b></li>
+        <li><b>Every interaction creates new value.</b></li>
+      </ul>
+      <p class="stack">
+        <span>HYFY connects your products to real-world as well as digital experiences, creating persistent relationships between organizations, communities, and the things they love.</span>
+      </p>
+      <div class="chain">
+        <span>Product</span><i>&rarr;</i><span>Ownership</span><i>&rarr;</i><span>Experience</span><i>&rarr;</i><span>Identity</span>
+      </div>
+      <p class="stack"><span>The technology stays invisible. The experience feels natural.</span></p>
+    </div>
+  </div></div>
+</section>
+
+<!-- ══ 02 IDENTITY ════════════════════════════════════════════════ -->
+<section class="beat" id="b2" data-accent="gold" data-flip>
+  <div class="stage"><div class="shell layout">
+    <div class="scene">
+      <svg class="art" viewBox="24 96 752 442" role="img" aria-label="A display case of objects that carry identity: a cap, a jersey, a mug, a ticket and a membership card">
+        <defs>
+          <radialGradient id="caseGlow" cx=".5" cy=".46" r=".6">
+            <stop offset="0" stop-color="#18d7f2" stop-opacity=".18"/><stop offset="1" stop-color="#18d7f2" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="crownG" x1=".16" y1="0" x2=".84" y2="1">
+            <stop offset="0" stop-color="#4a3a2a"/><stop offset=".55" stop-color="#2d2319"/><stop offset="1" stop-color="#171210"/>
+          </linearGradient>
+          <linearGradient id="billG" x1=".2" y1="0" x2=".8" y2="1">
+            <stop offset="0" stop-color="#2e2419"/><stop offset="1" stop-color="#120e0b"/>
+          </linearGradient>
+          <linearGradient id="knitG" x1=".18" y1="0" x2=".82" y2="1">
+            <stop offset="0" stop-color="#453526"/><stop offset=".5" stop-color="#2b2219"/><stop offset="1" stop-color="#181310"/>
+          </linearGradient>
+          <linearGradient id="glazeG" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#171732"/><stop offset=".22" stop-color="#4e3d2a"/>
+            <stop offset=".55" stop-color="#2c2219"/><stop offset="1" stop-color="#140f0c"/>
+          </linearGradient>
+          <linearGradient id="paperG" x1=".2" y1="0" x2=".8" y2="1">
+            <stop offset="0" stop-color="#40331f"/><stop offset="1" stop-color="#1d1710"/>
+          </linearGradient>
+          <linearGradient id="plasticG" x1=".1" y1="0" x2=".9" y2="1">
+            <stop offset="0" stop-color="#3d3122"/><stop offset=".5" stop-color="#171732"/><stop offset="1" stop-color="#100d0a"/>
+          </linearGradient>
+        </defs>
+        <ellipse cx="400" cy="316" rx="400" ry="230" fill="url(#caseGlow)"/>
+        <rect x="40" y="110" width="720" height="400" rx="5" fill="rgba(20,17,14,.86)" stroke="#18d7f2" stroke-opacity=".34"/>
+        <rect x="40" y="110" width="720" height="32" fill="#18d7f2" fill-opacity=".1"/>
+        <text x="60" y="131" fill="#d8b06a" font-family="Martian Mono,monospace" font-size="11" letter-spacing="2.10">THINGS PEOPLE KEEP</text>
+        <g stroke="#18d7f2" stroke-opacity=".2" fill="none">
+          <path d="M280 142 L280 326 M520 142 L520 326 M40 326 L760 326 M400 326 L400 510"/>
+        </g>
+
+        <!-- Objects are lit from the upper left, consistently. Each one sits in a pool of
+             case light with a contact shadow under it, and each is built from its own
+             material: brushed twill, knit, glazed ceramic, paper stock, moulded plastic. -->
+
+        <!-- cap -->
+        <use data-kit="emblem" href="#kit-baseball-emblem" transform="translate(88 175.3) scale(.9)" style="color:#18d7f2;--pop:#f43cd0"/>
+
+        <!-- jersey -->
+        <use data-kit="garment" href="#kit-baseball-garment" transform="translate(336.35 160.7) scale(.95)" style="color:#18d7f2;--pop:#f43cd0"/>
+
+        <!-- mug -->
+        <g transform="translate(634 234) scale(1.04)">
+          <ellipse cx="0" cy="52" rx="42" ry="6" fill="#000" opacity=".42"/>
+          <path d="M34 -18 C58 -18 62 -2 62 8 C62 21 53 30 34 30" fill="none" stroke="#08080e" stroke-opacity=".5" stroke-width="7"/>
+          <path d="M34 -18 C58 -18 62 -2 62 8 C62 21 53 30 34 30" fill="none" stroke="url(#glazeG)" stroke-width="4.5"/>
+          <path d="M-34 -34 L-34 34 C-34 42 -27 48 -18 48 L18 48 C27 48 34 42 34 34 L34 -34 Z" fill="url(#glazeG)"/>
+          <path d="M-34 -34 L-34 34 C-34 42 -27 48 -18 48 L18 48 C27 48 34 42 34 34 L34 -34 Z" fill="none" stroke="#18d7f2" stroke-opacity=".72" stroke-width="1.7"/>
+          <path d="M-24 -30 L-24 40" stroke="#f4f6fb" stroke-opacity=".16" stroke-width="5" stroke-linecap="round"/>
+          <path d="M26 -30 L26 36" stroke="#08080e" stroke-opacity=".35" stroke-width="6" stroke-linecap="round"/>
+          <ellipse cx="0" cy="-34" rx="34" ry="9" fill="#120e0b" stroke="#18d7f2" stroke-opacity=".72" stroke-width="1.7"/>
+          <ellipse cx="0" cy="-32" rx="27" ry="6.6" fill="#2a1a0e"/>
+          <ellipse cx="-8" cy="-33" rx="9" ry="2.4" fill="#18d7f2" opacity=".2"/>
+          <g fill="none" stroke="#f43cd0" stroke-opacity=".55" stroke-width="1.5" stroke-linecap="round">
+            <path d="M-12 -52 C-12 -60 -4 -60 -4 -68 M8 -52 C8 -62 16 -62 16 -70"/>
+          </g>
+        </g>
+
+        <!-- ticket -->
+        <g transform="translate(220 420) scale(1.15)">
+          <ellipse cx="0" cy="40" rx="62" ry="5" fill="#000" opacity=".4"/>
+          <path d="M-62 -34 L62 -34 L62 -8 A8 8 0 0 0 62 8 L62 34 L-62 34 L-62 8 A8 8 0 0 0 -62 -8 Z" fill="url(#paperG)"/>
+          <path d="M-62 -34 L62 -34 L62 -8 A8 8 0 0 0 62 8 L62 34 L-62 34 L-62 8 A8 8 0 0 0 -62 -8 Z" fill="none" stroke="#18d7f2" stroke-opacity=".72" stroke-width="1.7"/>
+          <g fill="#08080e" fill-opacity=".7">
+            <circle cx="18" cy="-27" r="1.7"/><circle cx="18" cy="-18" r="1.7"/><circle cx="18" cy="-9" r="1.7"/>
+            <circle cx="18" cy="0" r="1.7"/><circle cx="18" cy="9" r="1.7"/><circle cx="18" cy="18" r="1.7"/><circle cx="18" cy="27" r="1.7"/>
+          </g>
+          <g fill="#18d7f2">
+            <rect x="-50" y="-20" width="52" height="5" rx="1.5" fill-opacity=".82"/>
+            <rect x="-50" y="-6" width="38" height="4" rx="1.5" fill-opacity=".5"/>
+            <rect x="-50" y="3" width="44" height="4" rx="1.5" fill-opacity=".5"/>
+            <rect x="-50" y="17" width="28" height="6" rx="1.5" fill-opacity=".72"/>
+          </g>
+          <g fill="#08080e" fill-opacity=".82">
+            <rect x="27" y="-19" width="1.6" height="34"/><rect x="31" y="-19" width="3.2" height="34"/>
+            <rect x="37" y="-19" width="1.6" height="34"/><rect x="41" y="-19" width="2.4" height="34"/>
+            <rect x="46" y="-19" width="1.6" height="34"/><rect x="50" y="-19" width="3.2" height="34"/>
+            <rect x="56" y="-19" width="1.6" height="34"/>
+          </g>
+          <path d="M-60 -32 L60 -32" stroke="#f4f6fb" stroke-opacity=".14" stroke-width="2"/>
+        </g>
+
+        <!-- membership card -->
+        <g transform="translate(580 420) scale(1.15)">
+          <ellipse cx="0" cy="42" rx="56" ry="5" fill="#000" opacity=".4"/>
+          <rect x="-56" y="-36" width="112" height="72" rx="8" fill="url(#plasticG)"/>
+          <rect x="-56" y="-36" width="112" height="72" rx="8" fill="none" stroke="#18d7f2" stroke-opacity=".72" stroke-width="1.7"/>
+          <path d="M-56 14 L-8 -36 L26 -36 L-56 50 Z" fill="#f4f6fb" opacity=".055"/>
+          <rect x="-42" y="-21" width="26" height="19" rx="3" fill="#18d7f2" fill-opacity=".9"/>
+          <g stroke="#241a10" stroke-width="1.1" stroke-opacity=".9">
+            <path d="M-42 -14.5 L-16 -14.5 M-42 -8.5 L-16 -8.5 M-29 -21 L-29 -2 M-35 -21 L-35 -14.5 M-23 -8.5 L-23 -2"/>
+          </g>
+          <rect x="-42" y="-21" width="26" height="19" rx="3" fill="none" stroke="#8a6420" stroke-opacity=".7"/>
+          <g fill="#18d7f2">
+            <rect x="-42" y="9" width="54" height="6" rx="1.5" fill-opacity=".62"/>
+            <rect x="-42" y="21" width="32" height="4" rx="1.5" fill-opacity=".4"/>
+          </g>
+          <circle cx="34" cy="18" r="10" fill="none" stroke="#f43cd0" stroke-opacity=".85" stroke-width="1.6"/>
+          <circle cx="34" cy="18" r="4.4" fill="#f43cd0" fill-opacity=".55"/>
+          <path d="M-50 -30 L44 -30" stroke="#f4f6fb" stroke-opacity=".13" stroke-width="1.6"/>
+        </g>
+
+        <g font-family="Martian Mono,monospace" text-anchor="middle" font-size="11.5" fill="#8f8578" letter-spacing="0.98">
+          <text x="160" y="306">proof you were there</text>
+          <text x="400" y="306">your family's history</text>
+          <text x="640" y="306">your morning ritual</text>
+          <text x="220" y="492">the story you'll tell</text>
+          <text x="580" y="492">your community</text>
+        </g>
+      </svg>
+    </div>
+    <div class="copy">
+      <span class="idx" aria-hidden="true">02</span>
+      <p class="eyebrow">02<u>Identity</u><s></s></p>
+      <h2>The Greatest Brands Don't Just Sell Products. They Create Identity.</h2>
+      <p class="stack tight">
+        <span data-sportline="emblem">A baseball cap becomes proof you were there.</span>
+        <span data-sportline="garment">A jersey becomes part of your family's history.</span>
+        <span>A coffee mug becomes your morning ritual.</span>
+        <span>A membership becomes your community.</span>
+        <span>A ticket becomes the story you'll tell for years.</span>
+      </p>
+      <ul class="points">
+        <li><b>Products become stories.</b></li>
+        <li><b>Events become traditions.</b></li>
+        <li><b>Interactions become memories.</b></li>
+      </ul>
+      <p class="stack">
+        <span><em>People don't remember transactions.</em></span>
+        <span><em>They remember what those transactions meant.</em></span>
+      </p>
+    </div>
+  </div></div>
+</section>
+
+<!-- ══ 03 PARTICIPATION ═══════════════════════════════════════════ -->
+<section class="beat" id="b3" data-accent="ember">
+  <div class="stage"><div class="shell layout">
+    <div class="scene">
+      <svg class="art" viewBox="40 182 720 292" data-mvb="-41 160 502 590" data-b3art role="img" aria-label="A ballpark and a hockey rink running on the same connected layer">
+        <defs>
+          <radialGradient id="venueGlow" cx=".5" cy=".5" r=".5">
+            <stop offset="0" stop-color="#f43cd0" stop-opacity=".2"/><stop offset="1" stop-color="#f43cd0" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="tileG" x1=".2" y1="0" x2=".8" y2="1">
+            <stop offset="0" stop-color="#221a20"/><stop offset=".55" stop-color="#130f14"/><stop offset="1" stop-color="#0a080c"/>
+          </linearGradient>
+          <filter id="gl3" x="-80%" y="-80%" width="260%" height="260%">
+            <feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <ellipse cx="400" cy="300" rx="380" ry="170" fill="url(#venueGlow)"/>
+
+        <!-- the shared layer -->
+        <line data-mhide x1="365.9" y1="300" x2="434.1" y2="300" stroke="#18d7f2" stroke-width="1.6" stroke-opacity=".7" filter="url(#gl3)"/>
+
+        <!--opt:tile:A-->
+        <g id="tileA" data-mshift="0,0">
+        <!-- tile A, baseball -->
+        <ellipse cx="210" cy="396" rx="140" ry="16" fill="#000" opacity=".45"/>
+        <polygon points="210.0,390.0 365.9,300.0 210.0,210.0 54.1,300.0" fill="url(#tileG)" stroke="#f43cd0" stroke-opacity=".34"/>
+        <polygon points="210.0,354.0 300.9,301.5 291.6,296.6 281.4,292.3 270.6,288.5 259.2,285.4 247.3,283.0 235.1,281.2 222.6,280.1 210.0,279.8 197.4,280.1 184.9,281.2 172.7,283.0 160.8,285.4 149.4,288.5 138.6,292.3 128.4,296.6 119.1,301.5" fill="#181117"/>
+        <polyline points="295.7,304.5 286.9,299.9 277.4,295.8 267.2,292.3 256.4,289.3 245.2,287.0 233.7,285.3 221.9,284.3 210.0,284.0 198.1,284.3 186.3,285.3 174.8,287.0 163.6,289.3 152.8,292.3 142.6,295.8 133.1,299.9 124.3,304.5" fill="none" stroke="#f43cd0" stroke-opacity=".35" stroke-width="1.3"/>
+        <polygon points="210.0,354.0 239.9,336.8 235.7,334.6 231.1,332.9 226.2,331.5 220.9,330.4 215.5,329.8 210.0,329.6 204.5,329.8 199.1,330.4 193.8,331.5 188.9,332.9 184.3,334.6 180.1,336.8" fill="#231619"/>
+        <g stroke="#f43cd0" stroke-opacity=".75" stroke-width="1.3">
+          <line x1="210" y1="354" x2="300.9" y2="301.5"/><line x1="210" y1="354" x2="119.1" y2="301.5"/>
+        </g>
+        <polygon points="210.0,354.0 236.0,339.0 210.0,324.0 184.0,339.0" fill="none" stroke="#18d7f2" stroke-width="1.4" stroke-opacity=".85"/>
+        <g fill="#f2f4fa"><circle cx="210" cy="354" r="2.4"/><circle cx="236" cy="339" r="2"/><circle cx="210" cy="324" r="2"/><circle cx="184" cy="339" r="2"/></g>
+        <ellipse cx="210" cy="339" rx="7" ry="4" fill="#2d1d1a"/>
+          <text x="210" y="424" fill="#939bb0" font-family="Martian Mono,monospace" text-anchor="middle" font-size="10.5" letter-spacing="2.10" data-venue>DIAMOND</text>
+        </g>
+        <!--/opt:tile:A-->
+                        <!-- participation rising from both -->
+        <g id="signals"></g>
+
+        <g id="b3cap" data-mshift="-190,266" font-family="Martian Mono,monospace" text-anchor="middle" font-size="10.5" letter-spacing="2.10">
+          <text x="400" y="458" fill="#7fe3f7">ONE LAYER. ANY SPORT. ANY VENUE.</text>
+        </g>
+      </svg>
+    </div>
+    <div class="copy">
+      <span class="idx" aria-hidden="true">03</span>
+      <p class="eyebrow">03<u>Participation</u><s></s></p>
+      <h2>We Design Participation.</h2>
+      <p class="stack tight">
+        <span><em>Participation isn't measured by clicks.</em></span>
+        <span>It's measured by stories.</span>
+        <span>By traditions.</span>
+        <span>By repeat attendance.</span>
+        <span>By collections people proudly display.</span>
+        <span>By conversations that continue after everyone goes home.</span>
+      </p>
+      <p class="stack">
+        <span>HYFY creates systems that reward curiosity, loyalty, discovery, and contribution, turning customers into participants and audiences into communities.</span>
+      </p>
+      <ul class="points">
+        <li><b>Not because they have to participate.</b> Because they want to.</li>
+      </ul>
+    </div>
+  </div></div>
+</section>
+
+<!-- ══ 04 RENTED OR EARNED ════════════════════════════════════════ -->
+<section class="beat" id="b4" data-accent="ember" data-flip>
+  <div class="stage"><div class="shell layout">
+    <div class="scene">
+      <svg class="art" viewBox="70 96 700 326" data-mvb="-100 74 612 730" role="img" aria-label="Rented attention draining away next to earned belonging compounding">
+        <defs>
+          <radialGradient id="coldG" cx=".5" cy=".5" r=".5">
+            <stop offset="0" stop-color="#3e67ff" stop-opacity=".12"/><stop offset="1" stop-color="#3e67ff" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="warmG" cx=".5" cy=".5" r=".5">
+            <stop offset="0" stop-color="#f43cd0" stop-opacity=".24"/><stop offset="1" stop-color="#f43cd0" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="gl4" x="-80%" y="-80%" width="260%" height="260%">
+            <feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <ellipse cx="210" cy="270" rx="200" ry="180" fill="url(#coldG)"/>
+        <ellipse cx="590" cy="270" rx="220" ry="190" fill="url(#warmG)"/>
+        <line data-mhide x1="400" y1="96" x2="400" y2="440" stroke="#f2f4fa" stroke-opacity=".08"/>
+
+        <!-- left: rented attention, a funnel that leaks -->
+        <g>
+          <path d="M96 130 L324 130 L296 190 L124 190 Z" fill="#3e67ff" fill-opacity=".26" stroke="#3e67ff" stroke-opacity=".6"/>
+          <path d="M126 200 L294 200 L272 254 L148 254 Z" fill="#3e67ff" fill-opacity=".18" stroke="#3e67ff" stroke-opacity=".46"/>
+          <path d="M150 264 L270 264 L252 314 L168 314 Z" fill="#3e67ff" fill-opacity=".11" stroke="#3e67ff" stroke-opacity=".31"/>
+          <path d="M170 324 L250 324 L236 366 L184 366 Z" fill="#3e67ff" fill-opacity=".05" stroke="#3e67ff" stroke-opacity=".2"/>
+          <g id="leak"></g>
+          <g font-family="Martian Mono,monospace">
+            <text x="210" y="118" text-anchor="middle" fill="#3e67ff" font-size="11" letter-spacing="2.10">RENTED ATTENTION</text>
+            <text x="210" y="164" text-anchor="middle" fill="#dff2f8" font-size="12" font-weight="600" letter-spacing="0.98">REACH</text>
+            <text x="210" y="230" text-anchor="middle" fill="#8fd4e4" font-size="11.5" letter-spacing="0.98">CLICKS</text>
+            <text x="210" y="292" text-anchor="middle" fill="#6ba9b8" font-size="11" letter-spacing="0.98">FOLLOWERS</text>
+            <text x="210" y="350" text-anchor="middle" fill="#4d7d89" font-size="10.5" letter-spacing="0.98">GONE</text>
+            <text x="210" y="404" text-anchor="middle" fill="#4a5da8" font-size="10" letter-spacing="1.54">RESETS EVERY TIME THE RULES CHANGE</text>
+          </g>
+        </g>
+
+        <!-- right: earned belonging, a network that holds -->
+        <g id="b4warm" data-mshift="-380,330">
+        <g id="belong"></g>
+        <g font-family="Martian Mono,monospace">
+          <text x="590" y="118" text-anchor="middle" fill="#f43cd0" font-size="11" letter-spacing="2.10">EARNED BELONGING</text>
+          <text x="590" y="404" text-anchor="middle" fill="#a37146" font-size="10" letter-spacing="1.54">COMPOUNDS EVERY SEASON</text>
+        </g>
+        </g>
+      </svg>
+    </div>
+    <div class="copy">
+      <span class="idx" aria-hidden="true">04</span>
+      <p class="eyebrow">04<u>Rented or earned</u><s></s></p>
+      <h2>Attention Is Rented. Belonging Is Earned.</h2>
+      <p class="stack tight">
+        <span>Algorithms change.</span>
+        <span>Platforms come and go.</span>
+        <span>Audiences disappear.</span>
+        <span><em>But relationships endure.</em></span>
+      </p>
+      <p class="stack">
+        <span>HYFY helps organizations recognize the people who care, celebrate their identity, reward their participation, and give them reasons to keep coming back.</span>
+      </p>
+      <ul class="points">
+        <li><b>Because community isn't a marketing channel.</b> It's the business.</li>
+      </ul>
+    </div>
+  </div></div>
+</section>
+
+<!-- ══ 05 HUMAN CONNECTION ════════════════════════════════════════ -->
+<section class="beat" id="b5" data-accent="gold">
+  <div class="stage"><div class="shell layout">
+    <div class="scene">
+      <svg class="art" viewBox="92 84 616 392" data-mvb="150 66 500 560" role="img" aria-label="Four steps: a chip in the merch, a phone tapped against it, the item opening in the browser, and the fan keeping it. Below, people gathered in warm light.">
+        <defs>
+          <radialGradient id="hearth" cx=".5" cy=".54" r=".5">
+            <stop offset="0" stop-color="#18d7f2" stop-opacity=".34"/>
+            <stop offset=".55" stop-color="#f43cd0" stop-opacity=".14"/>
+            <stop offset="1" stop-color="#f43cd0" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="gl5" x="-70%" y="-70%" width="240%" height="240%">
+            <feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+
+        <!-- The whole mechanism, four steps, above the people it disappears
+             behind. This replaced a stack of receding words (ANALYTICS,
+             AUTOMATION, AI) set in the cold blue that everywhere else on this
+             page means "the algorithm", which had the page painting HYFY's own
+             stack as the antagonist. It also means the flagship finally says
+             what the product physically is. -->
+        <g id="tap-steps" data-mhide font-family="Martian Mono,monospace">
+          <line x1="150" y1="150" x2="650" y2="150" stroke="#18d7f2" stroke-opacity=".18" stroke-dasharray="3 5"/>
+
+          <!-- 01 the chip, inside the thing they already buy -->
+          <g transform="translate(175 150)">
+            <circle r="30" fill="#18d7f2" fill-opacity=".05" stroke="#18d7f2" stroke-opacity=".3"/>
+            <rect x="-13" y="-9" width="26" height="18" rx="3" fill="#141428" stroke="#18d7f2" stroke-opacity=".8" stroke-width="1.4"/>
+            <g stroke="#18d7f2" stroke-opacity=".55" stroke-width="1.1">
+              <path d="M-13 -4 H-19 M-13 0 H-19 M-13 4 H-19 M13 -4 H19 M13 0 H19 M13 4 H19"/>
+            </g>
+            <rect x="-6" y="-4" width="12" height="8" rx="1.5" fill="none" stroke="#18d7f2" stroke-opacity=".45"/>
+          </g>
+          <!-- 02 the tap -->
+          <g transform="translate(325 150)">
+            <circle r="30" fill="#18d7f2" fill-opacity=".05" stroke="#18d7f2" stroke-opacity=".3"/>
+            <rect x="0" y="-16" width="20" height="32" rx="4" fill="#141428" stroke="#18d7f2" stroke-opacity=".8" stroke-width="1.4"/>
+            <line x1="6" y1="-11" x2="14" y2="-11" stroke="#18d7f2" stroke-opacity=".4" stroke-width="1.2"/>
+            <g fill="none" stroke="#f43cd0" stroke-width="1.6" stroke-linecap="round">
+              <path d="M-6 -8 A11 11 0 0 0 -6 8" stroke-opacity=".85"/>
+              <path d="M-13 -13 A18 18 0 0 0 -13 13" stroke-opacity=".5"/>
+              <path d="M-20 -18 A25 25 0 0 0 -20 18" stroke-opacity=".25"/>
+            </g>
+          </g>
+          <!-- 03 it opens, in the browser -->
+          <g transform="translate(475 150)">
+            <circle r="30" fill="#18d7f2" fill-opacity=".05" stroke="#18d7f2" stroke-opacity=".3"/>
+            <rect x="-11" y="-17" width="22" height="34" rx="4" fill="#141428" stroke="#18d7f2" stroke-opacity=".8" stroke-width="1.4"/>
+            <rect x="-8" y="-13" width="16" height="9" rx="1.5" fill="#18d7f2" fill-opacity=".5"/>
+            <g stroke="#18d7f2" stroke-opacity=".45" stroke-width="1.2">
+              <path d="M-8 -1 H8 M-8 3 H4 M-8 7 H8 M-8 11 H2"/>
+            </g>
+          </g>
+          <!-- 04 it is theirs, and the club can reach them -->
+          <g transform="translate(625 150)">
+            <circle r="30" fill="#18d7f2" fill-opacity=".05" stroke="#18d7f2" stroke-opacity=".3"/>
+            <circle cx="-9" cy="-7" r="5.5" fill="none" stroke="#18d7f2" stroke-opacity=".8" stroke-width="1.4"/>
+            <path d="M-19 8 C-19 -1 -1 -1 -1 8" fill="none" stroke="#18d7f2" stroke-opacity=".8" stroke-width="1.4"/>
+            <rect x="6" y="-8" width="15" height="15" rx="2.5" fill="#141428" stroke="#f43cd0" stroke-opacity=".85" stroke-width="1.4"/>
+            <path d="M9.5 -0.5 L12.5 2.5 L17.5 -3.5" fill="none" stroke="#f43cd0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M-1 3 H6" stroke="#18d7f2" stroke-opacity=".5" stroke-dasharray="2 2"/>
+          </g>
+
+          <g text-anchor="middle" font-size="10" letter-spacing="1.7" fill="#7fe3f7">
+            <text x="175" y="200">01 &#183; CHIP</text>
+            <text x="325" y="200">02 &#183; TAP</text>
+            <text x="475" y="200">03 &#183; OPENS</text>
+            <text x="625" y="200">04 &#183; THEIRS</text>
+          </g>
+          <g text-anchor="middle" font-size="9" fill="#939bb0" letter-spacing=".4">
+            <text x="175" y="219">in the merch you</text><text x="175" y="232">already sell</text>
+            <text x="325" y="219">phone against it.</text><text x="325" y="232">no app, no scanner</text>
+            <text x="475" y="219">their item, in the</text><text x="475" y="232">browser. one field</text>
+            <text x="625" y="219">a belonging they keep,</text><text x="625" y="232">and a fan you can reach</text>
+          </g>
+        </g>
+
+        <g data-monly font-family="Martian Mono,monospace" style="display:none">
+          <path d="M280 172 V236 M520 172 V236" stroke="#18d7f2" stroke-opacity=".14" stroke-dasharray="3 5"/>
+          <path d="M310 132 H490 M310 268 H490" stroke="#18d7f2" stroke-opacity=".14" stroke-dasharray="3 5"/>
+          <g transform="translate(280 132)"><circle r="30" fill="#18d7f2" fill-opacity=".05" stroke="#18d7f2" stroke-opacity=".3"/><rect x="-13" y="-9" width="26" height="18" rx="3" fill="#141428" stroke="#18d7f2" stroke-opacity=".8" stroke-width="1.4"/><g stroke="#18d7f2" stroke-opacity=".55" stroke-width="1.1"><path d="M-13 -4 H-19 M-13 0 H-19 M-13 4 H-19 M13 -4 H19 M13 0 H19 M13 4 H19"/></g><rect x="-6" y="-4" width="12" height="8" rx="1.5" fill="none" stroke="#18d7f2" stroke-opacity=".45"/></g>
+          <text x="280" y="184" text-anchor="middle" font-size="11.5" letter-spacing="1.9" fill="#7fe3f7">01 &#183; CHIP</text>
+          <text x="280" y="202" text-anchor="middle" font-size="10.5" fill="#939bb0">in the merch</text>
+          <text x="280" y="217" text-anchor="middle" font-size="10.5" fill="#939bb0">you already sell</text>
+          <g transform="translate(520 132)"><circle r="30" fill="#18d7f2" fill-opacity=".05" stroke="#18d7f2" stroke-opacity=".3"/><rect x="0" y="-16" width="20" height="32" rx="4" fill="#141428" stroke="#18d7f2" stroke-opacity=".8" stroke-width="1.4"/><line x1="6" y1="-11" x2="14" y2="-11" stroke="#18d7f2" stroke-opacity=".4" stroke-width="1.2"/><g fill="none" stroke="#f43cd0" stroke-width="1.6" stroke-linecap="round"><path d="M-6 -8 A11 11 0 0 0 -6 8" stroke-opacity=".85"/><path d="M-13 -13 A18 18 0 0 0 -13 13" stroke-opacity=".5"/><path d="M-20 -18 A25 25 0 0 0 -20 18" stroke-opacity=".25"/></g></g>
+          <text x="520" y="184" text-anchor="middle" font-size="11.5" letter-spacing="1.9" fill="#7fe3f7">02 &#183; TAP</text>
+          <text x="520" y="202" text-anchor="middle" font-size="10.5" fill="#939bb0">phone against it.</text>
+          <text x="520" y="217" text-anchor="middle" font-size="10.5" fill="#939bb0">no app, no scanner</text>
+          <g transform="translate(280 268)"><circle r="30" fill="#18d7f2" fill-opacity=".05" stroke="#18d7f2" stroke-opacity=".3"/><rect x="-11" y="-17" width="22" height="34" rx="4" fill="#141428" stroke="#18d7f2" stroke-opacity=".8" stroke-width="1.4"/><rect x="-8" y="-13" width="16" height="9" rx="1.5" fill="#18d7f2" fill-opacity=".5"/><g stroke="#18d7f2" stroke-opacity=".45" stroke-width="1.2"><path d="M-8 -1 H8 M-8 3 H4 M-8 7 H8 M-8 11 H2"/></g></g>
+          <text x="280" y="320" text-anchor="middle" font-size="11.5" letter-spacing="1.9" fill="#7fe3f7">03 &#183; OPENS</text>
+          <text x="280" y="338" text-anchor="middle" font-size="10.5" fill="#939bb0">their item, in the</text>
+          <text x="280" y="353" text-anchor="middle" font-size="10.5" fill="#939bb0">browser. one field</text>
+          <g transform="translate(520 268)"><circle r="30" fill="#18d7f2" fill-opacity=".05" stroke="#18d7f2" stroke-opacity=".3"/><circle cx="-9" cy="-7" r="5.5" fill="none" stroke="#18d7f2" stroke-opacity=".8" stroke-width="1.4"/><path d="M-19 8 C-19 -1 -1 -1 -1 8" fill="none" stroke="#18d7f2" stroke-opacity=".8" stroke-width="1.4"/><rect x="6" y="-8" width="15" height="15" rx="2.5" fill="#141428" stroke="#f43cd0" stroke-opacity=".85" stroke-width="1.4"/><path d="M9.5 -0.5 L12.5 2.5 L17.5 -3.5" fill="none" stroke="#f43cd0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M-1 3 H6" stroke="#18d7f2" stroke-opacity=".5" stroke-dasharray="2 2"/></g>
+          <text x="520" y="320" text-anchor="middle" font-size="11.5" letter-spacing="1.9" fill="#7fe3f7">04 &#183; THEIRS</text>
+          <text x="520" y="338" text-anchor="middle" font-size="10.5" fill="#939bb0">a belonging they keep,</text>
+          <text x="520" y="353" text-anchor="middle" font-size="10.5" fill="#939bb0">and a fan you can reach</text>
+        </g>
+        <g data-mshift="0,118">
+        <ellipse cx="400" cy="336" rx="330" ry="150" fill="url(#hearth)"/>
+        <ellipse cx="400" cy="392" rx="182" ry="34" fill="#18d7f2" fill-opacity=".07"/>
+        <ellipse cx="400" cy="392" rx="182" ry="34" fill="none" stroke="#18d7f2" stroke-opacity=".2"/>
+        <circle cx="400" cy="352" r="16" fill="#18d7f2" filter="url(#gl5)"/>
+
+        <g id="folk"></g>
+
+        <text x="400" y="452" text-anchor="middle" fill="#c9a45e" font-family="Martian Mono,monospace" font-size="10.5" letter-spacing="2.10">THE TECHNOLOGY IS DESIGNED TO DISAPPEAR</text>
+        </g>
+      </svg>
+    </div>
+    <div class="copy">
+      <span class="idx" aria-hidden="true">05</span>
+      <p class="eyebrow">05<u>Human connection</u><s></s></p>
+      <h2>Built Around Human Connection.</h2>
+      <p class="stack tight">
+        <span><em>People naturally seek belonging.</em></span>
+        <span>They want products they love.</span>
+        <span>Experiences they'll remember.</span>
+        <span>Communities they'll feel part of.</span>
+        <span>People who share their passions.</span>
+      </p>
+      <p class="stack">
+        <span>HYFY connects those moments without asking people to change how they already behave.</span>
+        <span>The products they buy, the events they attend, the things they collect, and the experiences they participate in become natural entry points into something bigger.</span>
+      </p>
+      <p class="stack tight">
+        <span>A chip goes into the merch you already sell.</span>
+        <span>A fan holds their phone against it. No app, no scanner, no queue.</span>
+        <span>Their item opens in the browser. One field to join.</span>
+        <span><em>From then on it is theirs, and every tap is a fan you can reach.</em></span>
+      </p>
+      <p class="stack">
+        <span>Technology should make those connections easier. Never get in the way.</span>
+        <span>That's why the most sophisticated technology behind HYFY is designed to disappear.</span>
+      </p>
+      <ul class="points">
+        <li>AI. Connected products. Digital identity. Automation. Analytics.</li>
+        <li><b>They're not the experience.</b> They're what makes the experience possible.</li>
+      </ul>
+    </div>
+  </div></div>
+</section>
+
+<!-- ══ 06 AUDIENCE TO BELONGING ═══════════════════════════════════ -->
+<section class="beat" id="b6" data-accent="ember" data-flip>
+  <div class="stage"><div class="shell layout">
+    <div class="scene">
+      <svg class="art" viewBox="40 190 730 226" role="img" aria-label="Four stages from a scattered audience to a bound community">
+        <defs>
+          <filter id="gl6" x="-80%" y="-80%" width="260%" height="260%">
+            <feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <g id="stages"></g>
+        <g id="stagechrome"></g>
+      </svg>
+    </div>
+    <div class="copy">
+      <span class="idx" aria-hidden="true">06</span>
+      <p class="eyebrow">06<u>The progression</u><s></s></p>
+      <h2>From Audience to Participant to Community to Belonging.</h2>
+      <p class="stack tight">
+        <span>Every interaction is an opportunity to deepen the relationship.</span>
+        <span>Every product can unlock another experience.</span>
+        <span>Every experience can create another story.</span>
+        <span>Every story can strengthen identity.</span>
+      </p>
+      <p class="stack">
+        <span>And every person who feels like they belong becomes something more valuable than a customer.</span>
+        <span><em>They become part of what you're building.</em></span>
+      </p>
+    </div>
+  </div></div>
+</section>
+
+<!-- ══ 07 THE HYFY TEST ═══════════════════════════════════════════ -->
+<section class="beat flood" id="b7" data-accent="flood">
+  <div class="stage"><div class="shell layout">
+    <div class="copy">
+      <span class="idx" aria-hidden="true">07</span>
+      <p class="eyebrow">07<u>The standard</u><s></s></p>
+      <h2>The HYFY Test.</h2>
+      <p class="stack">
+        <span>Before we build anything, we ask one question.</span>
+        <span><em>Will someone leave saying...</em></span>
+      </p>
+      <div class="yeah"><b>Hell yeah.</b><b>Fuck yeah.</b></div>
+      <p class="stack"><span>If the answer isn't obvious, we keep working.</span></p>
+    </div>
+  </div></div>
+</section>
+
+</main>
+
+<!-- ══ WHAT WE BELIEVE ════════════════════════════════════════════ -->
+<section class="believe">
+  <div class="shell">
+    <p class="eyebrow">What we believe<s></s></p>
+    <h3>Five shifts already under way.</h3>
+    <div class="creeds">
+      <div class="creed"><div class="n">01</div><p>Products are becoming platforms.</p></div>
+      <div class="creed"><div class="n">02</div><p>Ownership is becoming participation.</p></div>
+      <div class="creed"><div class="n">03</div><p>Communities are becoming competitive advantages.</p></div>
+      <div class="creed"><div class="n">04</div><p>AI is making personalization effortless.</p></div>
+      <div class="creed"><div class="n">05</div><p>Physical and digital experiences are becoming indistinguishable.</p></div>
+    </div>
+    <p class="tail">The organizations that embrace these shifts won't simply sell more. <em>They'll matter more.</em></p>
+  </div>
+</section>
+
+<!-- ══ CLOSE ══════════════════════════════════════════════════════ -->
+<section class="close" id="start">
+  <div class="shell">
+    <p class="eyebrow" style="justify-content:center;"><s></s>The ask<s></s></p>
+    <h2>Build Something People Give a Shit About.</h2>
+    <p class="stack tight" style="max-width:36ch;">
+      <span>Products people keep.</span>
+      <span>Experiences people remember.</span>
+      <span>Communities people choose.</span>
+      <span><em>Relationships you own.</em></span>
+    </p>
+    <div class="actions">
+      <a class="btn" href="https://calendly.com/matt-kramer-epm/hyfy-discovery-call?utm_source=hyfy-pitch&utm_medium=page&utm_campaign=kalamazoo-growlers" target="_blank" rel="noopener"><span>Start a conversation</span><span class="arw">&rarr;</span></a>
+    </div>
+    <p class="fineprint" data-club="fineprint">HYFY Labs · Own the Relationship. Not the Algorithm.</p>
+    <div class="print-cta print-only">
+      <b>Start a conversation.</b>
+      Book a time &nbsp; <span>calendly.com/matt-kramer-epm/hyfy-discovery-call</span><br>
+      Email &nbsp; <span>matt@kramertechllc.com</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="shell">
+    <div class="foot">
+      <a class="mark" href="#top">
+        <img class="wordmark" src="../../img/brand/hyfy-labs-wordmark.png" alt="HYFY Labs" width="113" height="32">
+      </a>
+      <p>Own the Relationship. Not the Algorithm.</p>
+    </div>
+    <div class="ftcols nobrand">
+      <div><h4>Explore</h4><a href="../../live-experiences/index.html">Live Experiences</a><a href="../../collectibles/index.html">Collectibles</a><a href="../../hype-streetwear/index.html">Hype + Streetwear</a><a href="../../what-we-believe/index.html">What We Believe</a></div>
+      <div><h4>Company</h4><span class="plain">About</span><span class="plain">Work</span><span class="plain">Contact</span></div>
+      <div><h4>Legal</h4><a href="../../privacy/index.html">Privacy Policy</a><a href="../../terms/index.html">Terms of Service</a><a href="../../cookies/index.html">Cookie Policy / Cookie Preferences</a></div>
+      <div><h4>Social</h4><span class="plain">Twitter</span><span class="plain">LinkedIn</span></div>
+    </div>
+    <p class="ftlegal">&copy; 2026 HYFY Labs. All rights reserved.</p>
+    <p class="print-foot print-only">HYFY Labs &nbsp;·&nbsp; Own the Relationship. Not the Algorithm.</p>
+    <p class="note">
+      Every scene on this page is drawn in the browser. No trackers, no external requests, and
+      nothing above is a reported result.
+    </p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var seed = 20260815;
+  function rnd(){ seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; }
+  function el(tag, attrs){
+    var n = document.createElementNS('http://www.w3.org/2000/svg', tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    return n;
+  }
+
+
+
+  /* Where beat 03 stands its venues. The generic front door carries two
+     side by side; a club page carries one, centred. Reassigned below. */
+  var VENUE_SLOTS = { d: [[210, 300], [590, 300]], m: [[210, 300], [210, 560]] };
+
+  /* ── club personalisation ──────────────────────────────────────────
+     /for/<slug> injects a club config. Everything here is additive: with
+     no config the page is exactly the generic one. Facts render only when
+     the config carries them, so nothing about a club is ever invented. */
+  var clubEl = document.getElementById('club-data');
+  if (clubEl) {
+    try {
+      var club = JSON.parse(clubEl.textContent);
+      var name = club.name || '';
+      var setTx = function(sel, t){ var e = document.querySelector(sel); if (e) e.textContent = t; };
+      setTx('[data-club="lockup"]', '\u00d7 ' + name);
+      setTx('[data-club="kicker"]', 'Prepared for ' + name);
+      setTx('[data-club="fineprint"]', 'HYFY Labs \u00b7 Prepared for ' + name);
+
+      if (club.hero) {
+        var sub = document.querySelector('.hero .stack span');
+        if (sub) sub.textContent = club.hero;
+      }
+
+      var hero = document.querySelector('.hero .shell');
+      if (hero) {
+        var lock = document.createElement('div');
+        lock.className = 'clublogo';
+        lock.innerHTML = club.logo
+          ? (club.logoPlate
+              ? '<span class="plate"><img src="' + club.logo + '" alt="' + name + '"></span>'
+              : '<img src="' + club.logo + '" alt="' + name + '">')
+          : '<span>' + name + '</span>';
+        var em = document.createElement('em');
+        em.textContent = [club.league, club.city && club.state ? club.city + ', ' + club.state : club.city]
+          .filter(Boolean).join(' \u00b7 ');
+        if (em.textContent) lock.appendChild(em);
+        hero.insertBefore(lock, hero.firstChild);
+      }
+
+      var band = document.getElementById('clubband');
+      if (band && club.facts && club.facts.length) {
+        club.facts.forEach(function(f){
+          var d = document.createElement('div');
+          d.innerHTML = '<b>' + f.value + '</b> <i>' + f.label + '</i>';
+          band.appendChild(d);
+        });
+        var srcs = club.facts.map(function(f){ return String(f.source || ''); });
+        var est  = srcs.filter(function(s){ return !/^verified/i.test(s); });
+        if (est.length) {
+          var one = est.every(function(s){ return s === est[0]; });
+          var basis = one ? est[0].replace(/^Est\.\s*/i, '').replace(/^\((.*)\)$/, '$1') : '';
+          var q = document.createElement('div');
+          q.className = 'est';
+          q.textContent = est.length === club.facts.length
+            ? 'Estimated' + (basis ? ', ' + basis : '') + '. Correct us and we will use your numbers.'
+            : 'Some figures estimated. Correct us and we will use your numbers.';
+          band.appendChild(q);
+        }
+        band.hidden = false;
+      }
+
+      /* Which club page produced a booking. The referrer only ever carries the
+         origin, so the club rides the link itself and survives any stripping. */
+      document.querySelectorAll('a[href*="calendly.com"]').forEach(function(a){
+        var u = a.getAttribute('href');
+        if (u.indexOf('utm_') > -1) return;
+        a.setAttribute('href', u + (u.indexOf('?') > -1 ? '&' : '?') +
+          'utm_source=hyfy-pitch&utm_medium=page&utm_campaign=' + encodeURIComponent(club.slug || 'club'));
+      });
+      var pc = document.querySelector('.print-cta span');
+      if (pc && club.slug) pc.textContent = pc.textContent.trim();
+
+      /* ── one venue, and it is theirs ────────────────────────────
+         Beat 03 was built as a ballpark and a rink side by side, and 01
+         and 02 carried a ball cap and a baseball jersey for everyone. On
+         a hockey club's page that included the literal sentence "A
+         baseball cap becomes proof you were there".
+
+         A club page now shows exactly one venue: their sport, centred,
+         at the size the two tiles used to share. Matt's call, and it
+         costs the "any sport" line on this beat, so that line changes
+         too rather than being left over a picture that no longer makes
+         it. The generic front door still carries both, because that page
+         is pitching the platform and has no club to be wrong about. */
+      var SPORT = {
+        baseball: {kit:'baseball', tile:'tileA', emblem:'A baseball cap',    garment:'A jersey'},
+        softball: {kit:'baseball', tile:'tileA', emblem:'A ball cap',        garment:'A jersey'},
+        hockey:   {kit:'hockey',   tile:'tileB', emblem:'A game puck',       garment:'A sweater'},
+        soccer:   {kit:'soccer',   tile:'tileC', emblem:'A supporter scarf', garment:'A shirt'}
+      };
+      var TILE_X = {tileA:210, tileB:590, tileC:210};   // where each tile is drawn
+      var sp = SPORT[club.sport];
+      if (sp) {
+        document.querySelectorAll('[data-kit]').forEach(function(u){
+          u.setAttribute('href', '#kit-' + sp.kit + '-' + u.dataset.kit);
+        });
+        setTx('[data-sportline="emblem"]',  sp.emblem  + ' becomes proof you were there.');
+        setTx('[data-sportline="garment"]', sp.garment + " becomes part of your family's history.");
+
+        Object.keys(TILE_X).forEach(function(id){
+          var g = document.getElementById(id);
+          if (!g) return;                       // the server ships only the hero tile
+          if (id !== sp.tile) { g.style.display = 'none'; return; }
+          g.style.display = '';                 // the pitch tile ships hidden
+          /* every tile is drawn about its own centre, so standing it in the
+             middle of the board is one translate */
+          g.dataset.dshift = (400 - TILE_X[id]) + ',0';
+          g.dataset.mshift = (210 - TILE_X[id]) + ',0';
+
+          var ring = document.createElementNS('http://www.w3.org/2000/svg', 'ellipse');
+          ring.setAttribute('cx', TILE_X[id]); ring.setAttribute('cy', 300);
+          ring.setAttribute('rx', 164); ring.setAttribute('ry', 100);
+          ring.setAttribute('fill', 'none');
+          ring.setAttribute('stroke', 'var(--accent)');
+          ring.setAttribute('stroke-opacity', '.5');
+          ring.setAttribute('stroke-dasharray', '5 7');
+          g.appendChild(ring);
+
+          /* their venue by name, shrunk to fit rather than truncated,
+             because "Allen County War Memorial Coliseum" is a real one */
+          var lab = g.querySelector('[data-venue]');
+          if (lab && club.venue) {
+            var t = String(club.venue).toUpperCase();
+            var fs = t.length <= 14 ? 10.5 : Math.max(7.2, 10.5 * 14 / t.length);
+            lab.textContent = t;
+            lab.setAttribute('font-size', fs.toFixed(1));
+            lab.setAttribute('letter-spacing', (fs / 10.5 * 2.1).toFixed(2));
+            lab.setAttribute('fill', '#bcc2d2');
+          }
+        });
+
+        /* one venue gets the canvas the two used to share: tighter viewBox
+           on both breakpoints, which enlarges the drawing and its label
+           together rather than scaling a group and shrinking the type */
+        var art = document.querySelector('[data-b3art]');
+        if (art) {
+          art.dataset.dvb = '186 182 428 292';
+          art.dataset.mvb = '40 186 340 340';
+          if (club.venue) art.setAttribute('aria-label', club.venue + ' running on the connected layer');
+          /* the short bar between the two tiles has nothing left to join */
+          var link = art.querySelector('line[data-mhide]');
+          if (link) link.remove();
+        }
+        var cap = document.getElementById('b3cap');
+        if (cap) {
+          cap.dataset.dshift = '0,0';
+          cap.dataset.mshift = '-190,20';
+          var capTx = cap.querySelector('text');
+          /* "any sport" was carried by having two sports on screen. With one
+             venue the picture no longer makes that claim, so the line stops
+             making it and says something true about their building instead. */
+          if (capTx) capTx.textContent = 'ONE LAYER. EVERY SEAT. EVERY NIGHT.';
+        }
+        VENUE_SLOTS = { d: [[400, 300]], m: [[210, 300]] };
+      }
+    } catch (e) { /* a bad config must never take the page down */ }
+  }
+
+  /* ── responsive art direction ──────────────────────────────────────
+     A canvas drawn for 1440 landscape is the wrong shape for a 390
+     portrait phone, and scaling it does not fix that. Scenes carry a
+     second composition, applied here. Zooming the viewBox enlarges the
+     labels along with the drawing, which is why the text stays legible. */
+  var MQ = window.matchMedia('(max-width:980px)');
+  function applyArt(){
+    var m = MQ.matches;
+    document.querySelectorAll('svg.art[data-mvb]').forEach(function(svg){
+      if (!svg.dataset.dvb) svg.dataset.dvb = svg.getAttribute('viewBox');
+      svg.setAttribute('viewBox', m ? svg.dataset.mvb : svg.dataset.dvb);
+    });
+    document.querySelectorAll('[data-mshift]').forEach(function(g){
+      g.setAttribute('transform', 'translate(' + (m ? g.dataset.mshift : (g.dataset.dshift || '0,0')) + ')');
+    });
+    document.querySelectorAll('[data-mhide]').forEach(function(el){ el.style.display = m ? 'none' : ''; });
+    document.querySelectorAll('[data-monly]').forEach(function(el){ el.style.display = m ? '' : 'none'; });
+    if (typeof drawStages === 'function') drawStages();
+    if (typeof drawSignals === 'function') drawSignals();
+  }
+
+  /* ── 03, participation rising off the venues on the board ─────────
+     Redrawn rather than drawn once, because a club page puts one venue in
+     the middle where the generic page has two side by side, and the
+     particles are positioned per slot. Reseeds first so the board is the
+     same every render and the generators after it get the same sequence. */
+  function drawSignals(){
+    var sig = document.getElementById('signals');
+    if (!sig) return;
+    while (sig.firstChild) sig.removeChild(sig.firstChild);
+    seed = 20260815;
+    /* Sampled on the tile's own plane rather than in a band above it. The
+       tiles are a rhombus 311.8 x 180, so (u,v) in [-1,1] squared lands at
+       (77.95(u-v), 45(u+v)); holding u+v in the upper range keeps every
+       stalk standing on the surface instead of floating off the near edge.
+       A centred single venue is 1.7x the size the two shared, and a fixed
+       124-wide band read as a cluster in one corner of it. */
+    var N = VENUE_SLOTS.d.length > 1 ? 11 : 17;
+    (MQ.matches ? VENUE_SLOTS.m : VENUE_SLOTS.d).forEach(function(c){
+      for (var i = 0; i < N; i++){
+        var u = -1 + rnd() * 2, v = -1 + rnd() * 2;
+        var s = u + v;
+        if (s > 0.1) { u -= s * 0.75; v -= s * 0.75; }      // keep to the upper surface
+        var x = c[0] + 77.95 * (u - v) * 0.86;
+        var h = 10 + rnd() * 30;
+        var y = c[1] + 45 * (u + v) * 0.86 - 6;
+        sig.appendChild(el('line', {
+          x1:x.toFixed(1), y1:y.toFixed(1), x2:x.toFixed(1), y2:(y - h).toFixed(1),
+          stroke: rnd() > .4 ? '#f43cd0' : '#18d7f2',
+          'stroke-opacity': (0.16 + rnd() * 0.4).toFixed(2), 'stroke-width': 1.4
+        }));
+        sig.appendChild(el('circle', {cx:x.toFixed(1), cy:(y - h).toFixed(1), r:1.6, fill:'#18d7f2', opacity:(0.3 + rnd()*0.5).toFixed(2)}));
+      }
+    });
+  }
+  drawSignals();
+
+  /* ── 04, the leak and the network ──────────────────────────────── */
+  var leak = document.getElementById('leak');
+  if (leak){
+    for (var i = 0; i < 26; i++){
+      leak.appendChild(el('circle', {
+        cx:(186 + rnd() * 48).toFixed(1), cy:(374 + rnd() * 58).toFixed(1),
+        r:(0.8 + rnd() * 1.4).toFixed(2), fill:'#3e67ff',
+        opacity:(0.05 + rnd() * 0.22).toFixed(2)
+      }));
+    }
+  }
+  var bel = document.getElementById('belong');
+  if (bel){
+    var pts = [];
+    for (var n = 0; n < 46; n++){
+      var a = rnd() * Math.PI * 2, r = Math.pow(rnd(), .58);
+      pts.push({ x: 590 + Math.cos(a) * r * 168, y: 262 + Math.sin(a) * r * 116, big: rnd() > .86 });
+    }
+    var lines = el('g', {stroke:'#f43cd0', fill:'none'});
+    for (var i2 = 0; i2 < pts.length; i2++){
+      for (var j = i2 + 1; j < pts.length; j++){
+        var dx = pts[i2].x - pts[j].x, dy = pts[i2].y - pts[j].y;
+        var d = Math.sqrt(dx * dx + dy * dy);
+        if (d < 74){
+          lines.appendChild(el('line', {
+            x1:pts[i2].x.toFixed(1), y1:pts[i2].y.toFixed(1), x2:pts[j].x.toFixed(1), y2:pts[j].y.toFixed(1),
+            'stroke-opacity': (0.36 * (1 - d / 74)).toFixed(3), 'stroke-width':1
+          }));
+        }
+      }
+    }
+    bel.appendChild(lines);
+    pts.forEach(function(p){
+      bel.appendChild(el('circle', {
+        cx:p.x.toFixed(1), cy:p.y.toFixed(1), r:p.big ? 4 : 2.2,
+        fill: p.big ? '#18d7f2' : '#f43cd0', opacity: p.big ? 1 : (0.55 + rnd() * 0.45).toFixed(2),
+        filter: p.big ? 'url(#gl4)' : null
+      }));
+    });
+  }
+
+  /* ── 05, people in the light ───────────────────────────────────── */
+  var folk = document.getElementById('folk');
+  if (folk){
+    var ring = [[276,382],[330,398],[400,404],[470,398],[524,382],[352,368],[448,368]];
+    ring.forEach(function(p, i){
+      var s = i > 4 ? 0.82 : 1;
+      var g = el('g', {opacity: i > 4 ? 0.6 : 0.95});
+      /* same treatment as the other objects: sits on a shadow, lit from one side */
+      g.appendChild(el('ellipse', {cx:p[0], cy:p[1] + 3 * s, rx:14 * s, ry:3.2 * s, fill:'#000', opacity:.45}));
+      g.appendChild(el('path', {
+        d:'M' + (p[0] - 11 * s) + ' ' + p[1] + ' C' + (p[0] - 11 * s) + ' ' + (p[1] - 20 * s) + ' ' + (p[0] + 11 * s) + ' ' + (p[1] - 20 * s) + ' ' + (p[0] + 11 * s) + ' ' + p[1] + ' Z',
+        fill:'#17120e', stroke:'#18d7f2', 'stroke-opacity':.5
+      }));
+      g.appendChild(el('path', {
+        d:'M' + (p[0] - 9 * s) + ' ' + (p[1] - 3 * s) + ' C' + (p[0] - 9 * s) + ' ' + (p[1] - 17 * s) + ' ' + (p[0] - 2 * s) + ' ' + (p[1] - 19 * s) + ' ' + (p[0] - 1 * s) + ' ' + (p[1] - 19 * s),
+        fill:'none', stroke:'#cfe6ff', 'stroke-opacity':.28, 'stroke-width':1.6 * s, 'stroke-linecap':'round'
+      }));
+      g.appendChild(el('circle', {cx:p[0], cy:p[1] - 30 * s, r:7 * s, fill:'#17120e', stroke:'#18d7f2', 'stroke-opacity':.5}));
+      g.appendChild(el('circle', {cx:p[0] - 2.4 * s, cy:p[1] - 32 * s, r:2.4 * s, fill:'#cfe6ff', opacity:.22}));
+      folk.appendChild(g);
+    });
+  }
+
+  /* -- 06, four stages ---------------------------------------------
+     Four clusters in a row is 3.23:1, which renders 101px tall on a
+     phone. Portrait gets the same four stages as a 2x2 instead. */
+  var STAGE_TONE = ['#686f82', '#a2988c', '#e08a4a', '#18d7f2'];
+  var STAGE_NAME = ['AUDIENCE', 'PARTICIPANT', 'COMMUNITY', 'BELONGING'];
+  var STAGE_D = {
+    vb: '40 190 730 226',
+    pos: [[120,272],[307,272],[494,272],[681,272]],
+    spread: [70,66,62,56], n: [18,24,30,36], link: [0,54,72,88], r: [2.4,2.8,3.2,3.6],
+    labelDy: 128, arrows: [[213,285],[400,285],[587,285]], rule: [60,740,374], fs: 10.5
+  };
+  var STAGE_M = {
+    vb: '20 50 760 690',
+    pos: [[215,205],[565,205],[215,500],[565,500]],
+    spread: [104,100,96,90], n: [20,28,34,42], link: [0,80,104,124], r: [3.4,3.9,4.4,4.9],
+    labelDy: 140, arrows: [[390,205],[390,352],[390,500]], rule: null, fs: 15
+  };
+  function drawStages(){
+    var stages = document.getElementById('stages');
+    var chrome = document.getElementById('stagechrome');
+    if (!stages || !chrome) return;
+    var L = MQ.matches ? STAGE_M : STAGE_D;
+    stages.textContent = ''; chrome.textContent = '';
+    var svg = document.querySelector('#b6 svg.art');
+    if (svg) svg.setAttribute('viewBox', L.vb);
+
+    var sd = 99117;                    // local seed so the layout is identical on every redraw
+    function r2(){ sd = (sd * 1664525 + 1013904223) % 4294967296; return sd / 4294967296; }
+
+    L.pos.forEach(function(c, ci){
+      var g = el('g', {}), pts = [], cx = c[0], cy = c[1], sp = L.spread[ci];
+      for (var i = 0; i < L.n[ci]; i++){
+        var ang = r2() * Math.PI * 2, rr = Math.pow(r2(), ci >= 2 ? .5 : .8);
+        pts.push({x: cx + Math.cos(ang) * rr * sp, y: cy + Math.sin(ang) * rr * (sp * .82)});
+      }
+      if (L.link[ci]){
+        var lg = el('g', {stroke: STAGE_TONE[ci], fill: 'none'});
+        for (var i2 = 0; i2 < pts.length; i2++){
+          for (var j = i2 + 1; j < pts.length; j++){
+            var dx = pts[i2].x - pts[j].x, dy = pts[i2].y - pts[j].y, d = Math.sqrt(dx*dx + dy*dy);
+            if (d < L.link[ci]) lg.appendChild(el('line', {
+              x1:pts[i2].x.toFixed(1), y1:pts[i2].y.toFixed(1),
+              x2:pts[j].x.toFixed(1), y2:pts[j].y.toFixed(1),
+              'stroke-opacity': (0.3 * (1 - d / L.link[ci])).toFixed(3), 'stroke-width':1 }));
+          }
+        }
+        g.appendChild(lg);
+      }
+      pts.forEach(function(q){
+        g.appendChild(el('circle', {cx:q.x.toFixed(1), cy:q.y.toFixed(1), r:L.r[ci],
+          fill:STAGE_TONE[ci], opacity:(0.45 + r2() * 0.55).toFixed(2),
+          filter: ci === 3 ? 'url(#gl6)' : null}));
+      });
+      if (ci === 3) g.appendChild(el('ellipse', {cx:cx, cy:cy, rx:sp + 20, ry:sp * .82 + 16,
+        fill:'none', stroke:'#18d7f2', 'stroke-opacity':.34}));
+      stages.appendChild(g);
+
+      var t = el('text', {x:cx, y:cy + L.labelDy, fill:STAGE_TONE[ci], 'text-anchor':'middle',
+        'font-family':'Martian Mono,monospace', 'font-size':L.fs,
+        'letter-spacing':(L.fs * 0.17).toFixed(2)});
+      t.textContent = STAGE_NAME[ci];
+      chrome.appendChild(t);
+    });
+
+    L.arrows.forEach(function(pt){
+      var t = el('text', {x:pt[0], y:pt[1], fill:'#f43cd0', 'fill-opacity':.55,
+        'text-anchor':'middle', 'font-family':'Martian Mono,monospace',
+        'font-size': MQ.matches ? 24 : 15});
+      t.textContent = '\u2192';
+      chrome.appendChild(t);
+    });
+    if (L.rule) chrome.appendChild(el('line', {x1:L.rule[0], y1:L.rule[2], x2:L.rule[1],
+      y2:L.rule[2], stroke:'#f2f4fa', 'stroke-opacity':.08}));
+  }
+  drawStages();
+  applyArt();
+  if (MQ.addEventListener) MQ.addEventListener('change', applyArt); else MQ.addListener(applyArt);
+
+  /* ── ambient dust ──────────────────────────────────────────────── */
+  var sky = document.getElementById('dust'), ctx = sky.getContext('2d'), motes = [], W = 0, H = 0;
+  function sizeSky(){
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = sky.clientWidth; H = sky.clientHeight;
+    sky.width = W * dpr; sky.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    motes = [];
+    var count = Math.round((W * H) / 9000);
+    for (var i = 0; i < count; i++){
+      motes.push({x:Math.random() * W, y:Math.random() * H, r:Math.random() * 1.2 + 0.2, a:Math.random(), s:0.0012 + Math.random() * 0.004});
+    }
+    if (reduce) drawSky(0);
+  }
+  function drawSky(t){
+    ctx.clearRect(0, 0, W, H);
+    for (var i = 0; i < motes.length; i++){
+      var m = motes[i];
+      ctx.globalAlpha = reduce ? 0.32 : 0.12 + Math.abs(Math.sin(t * m.s + m.a)) * 0.42;
+      ctx.fillStyle = i % 7 === 0 ? '#18d7f2' : '#f2f4fa';
+      ctx.beginPath(); ctx.arc(m.x, m.y, m.r, 0, 6.2832); ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+    if (!reduce) requestAnimationFrame(drawSky);
+  }
+  sizeSky();
+  if (!reduce) requestAnimationFrame(drawSky);
+  window.addEventListener('resize', sizeSky);
+
+  /* ── scroll drives the camera ──────────────────────────────────── */
+  var beats = [].slice.call(document.querySelectorAll('.beat'));
+  var railLinks = [].slice.call(document.querySelectorAll('.rail a'));
+  var stagesEl = beats.map(function(b){ return b.querySelector('.stage'); });
+  var wash = document.getElementById('wash');
+  var nav = document.getElementById('nav');
+  var bar = document.getElementById('progress');
+  /* Read from the tokens, never hardcoded. A club page overrides --ember and
+     --gold in <head>, and this driver writes --accent as an INLINE style on
+     the root, which beats any stylesheet. Hardcoding the house palette here
+     meant every club page painted its beat accents, its eyebrows, its rail and
+     the background wash in HYFY orange no matter what colour was sampled off
+     the club's own mark; only the SVG strokes, which bind to --ember directly,
+     ever showed the club. */
+  var TOKENS = getComputedStyle(document.documentElement);
+  function token(name, fallback){
+    var v = (TOKENS.getPropertyValue(name) || '').trim();
+    return /^#[0-9a-f]{6}$/i.test(v) ? v : fallback;
+  }
+  var accents = { ember: token('--ember', '#f43cd0'),
+                  gold:  token('--gold',  '#18d7f2'),
+                  flood: token('--gold',  '#18d7f2') };
+  var ticking = false, lastAccent = '';
+
+  function apply(){
+    ticking = false;
+    var vh = window.innerHeight;
+    var doc = document.documentElement;
+    var max = doc.scrollHeight - vh;
+    bar.style.width = (max > 0 ? (doc.scrollTop / max) * 100 : 0).toFixed(2) + '%';
+    nav.classList.toggle('stuck', doc.scrollTop > 40);
+
+    var active = null, best = 0, activeIdx = -1;
+    beats.forEach(function(b, i){
+      var r = b.getBoundingClientRect();
+      var span = r.height - vh;
+      var p = span > 0 ? Math.max(0, Math.min(1, -r.top / span)) : 0;
+      stagesEl[i].style.setProperty('--p', p.toFixed(4));
+      var vis = Math.min(vh, Math.max(0, Math.min(r.bottom, vh) - Math.max(r.top, 0)));
+      if (vis > best){ best = vis; active = b; activeIdx = i; }
+    });
+
+    railLinks.forEach(function(a, i){ a.setAttribute('aria-current', i === activeIdx ? 'true' : 'false'); });
+
+    var key = active ? active.getAttribute('data-accent') : 'ember';
+    /* the flood only owns the chrome once it actually fills the viewport */
+    var floodBeat = document.getElementById('b7');
+    var fr = floodBeat.getBoundingClientRect();
+    var flooded = fr.top < vh * 0.34 && fr.bottom > vh * 0.66;
+    if (flooded) document.documentElement.setAttribute('data-flood', '');
+    else document.documentElement.removeAttribute('data-flood');
+
+    var hex = accents[key] || '#f43cd0';
+    if (hex !== lastAccent){
+      lastAccent = hex;
+      document.documentElement.style.setProperty('--accent', hex);
+      wash.style.background = 'radial-gradient(112% 76% at 50% 62%, ' + rgba(hex, key === 'flood' ? 0.06 : 0.2) + ' 0%, transparent 62%)';
+    }
+  }
+  function rgba(hex, a){
+    var n = parseInt(hex.slice(1), 16);
+    return 'rgba(' + ((n >> 16) & 255) + ',' + ((n >> 8) & 255) + ',' + (n & 255) + ',' + a + ')';
+  }
+  function onScroll(){ if (!ticking){ ticking = true; requestAnimationFrame(apply); } }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+  apply();
+})();
+</script>
+</body>
+</html>
